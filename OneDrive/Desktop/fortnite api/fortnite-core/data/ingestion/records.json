@@ -1,0 +1,3517 @@
+{
+  "records": [
+    {
+      "id": "epic-tournament-s38_og_cup",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "OG",
+      "content": "OG Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s38_og_cup"
+      }
+    },
+    {
+      "id": "epic-tournament-s38_og_cupzb",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "ZB OG",
+      "content": "ZB OG Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s38_og_cupzb"
+      }
+    },
+    {
+      "id": "epic-tournament-s38_playstationreload",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "PlayStation Reload Cup",
+      "content": "PlayStation Reload Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s38_playstationreload"
+      }
+    },
+    {
+      "id": "epic-tournament-s38_perfeval",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Fortnite",
+      "content": "Fortnite Performance Evaluation",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s38_perfeval"
+      }
+    },
+    {
+      "id": "epic-tournament-s38_ranked_duosreload",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Duos Ranked Cup (Reload)",
+      "content": "Duos Ranked Cup (Reload)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s38_ranked_duosreload"
+      }
+    },
+    {
+      "id": "epic-tournament-s38_reloadquick",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Reload Quick Cup (Reload)",
+      "content": "Reload Quick Cup (Reload)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s38_reloadquick"
+      }
+    },
+    {
+      "id": "epic-tournament-s38_duosvictory",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Duos Victory Cash Cup",
+      "content": "Duos Victory Cash Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s38_duosvictory"
+      }
+    },
+    {
+      "id": "epic-tournament-s38_squadsvictory",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Squads Victory Cash Cup",
+      "content": "Squads Victory Cash Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s38_squadsvictory"
+      }
+    },
+    {
+      "id": "epic-tournament-s38_ranked_duosbr",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Duos Ranked Cup (Battle Royale)",
+      "content": "Duos Ranked Cup (Battle Royale)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s38_ranked_duosbr"
+      }
+    },
+    {
+      "id": "epic-tournament-s38_ranked_duoszb",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Duos Ranked Cup (Zero Build)",
+      "content": "Duos Ranked Cup (Zero Build)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s38_ranked_duoszb"
+      }
+    },
+    {
+      "id": "epic-tournament-s38_ranked_solobr",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Solo Ranked Cup (Battle Royale)",
+      "content": "Solo Ranked Cup (Battle Royale)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s38_ranked_solobr"
+      }
+    },
+    {
+      "id": "epic-tournament-s38_touchonly",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Touch-Only Test Cup",
+      "content": "Touch-Only Test Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s38_touchonly"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_fortnitefridays",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Fortnite Fridays",
+      "content": "Fortnite Fridays",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_fortnitefridays"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_fortnitefridays_delulu",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Fortnite Fridays",
+      "content": "Fortnite Fridays",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_fortnitefridays_delulu"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_wednesday",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Wednesday Addams Haunted Cup",
+      "content": "Wednesday Addams Haunted Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_wednesday"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_jason",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Jason Haunted Cup",
+      "content": "Jason Haunted Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_jason"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_earlyaccesscups",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Early Access Cups",
+      "content": "Early Access Cups",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_earlyaccesscups"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_nitemareisland",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Nitemare Island: Early Access",
+      "content": "Nitemare Island: Early Access",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_nitemareisland"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_kaicenat",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Kai Cenat Icon Cup",
+      "content": "Kai Cenat Icon Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_kaicenat"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_axeofchampionsblitz",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Axe of Champions Blitz Cup (Mobile)",
+      "content": "Axe of Champions Blitz Cup (Mobile)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_axeofchampionsblitz"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_surfwitch_fncs_blitz",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Champion Surf Witch FNCS Blitz Cup (Mobile)",
+      "content": "Champion Surf Witch FNCS Blitz Cup (Mobile)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_surfwitch_fncs_blitz"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_mrsavage",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "MrSavage Icon Cup",
+      "content": "MrSavage Icon Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_mrsavage"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_blitzmobile",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Blitz Mobile Cup",
+      "content": "Blitz Mobile Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_blitzmobile"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_blitztest",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Blitz Test Cup",
+      "content": "Blitz Test Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_blitztest"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_blitzweekly",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Blitz Mobile Cup",
+      "content": "Blitz Mobile Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_blitzweekly"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_blitzoneswing",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Blitz Cup: One Swing",
+      "content": "Blitz Cup: One Swing",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_blitzoneswing"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_duostrial",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Duos Trial",
+      "content": "Duos Trial",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_duostrial"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_soloseries",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Solo Series",
+      "content": "Solo Series",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_soloseries"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_division1_duos",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Duos Division 1",
+      "content": "Duos Division 1",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_division1_duos"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_division2_duos",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Duos Division 2",
+      "content": "Duos Division 2",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_division2_duos"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_division3_duos",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Duos Division 3",
+      "content": "Duos Division 3",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_division3_duos"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_division4_duos",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Duos Division 4",
+      "content": "Duos Division 4",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_division4_duos"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_division5_duos",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Duos Division 5",
+      "content": "Duos Division 5",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_division5_duos"
+      }
+    },
+    {
+      "id": "epic-tournament-s38_soloseries",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Solo Series Victory Cash Cup",
+      "content": "Solo Series Victory Cash Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s38_soloseries"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_bladeofchamps",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Blade of Champions Cup (Reload)",
+      "content": "Blade of Champions Cup (Reload)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_bladeofchamps"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_division1",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Division 1 Practice",
+      "content": "FNCS Division 1 Practice",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_division1"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_duosconsole",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Duos Console Victory Cash Cup",
+      "content": "Duos Console Victory Cash Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_duosconsole"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_aceswild",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Aces Wild Card FNCS Cup",
+      "content": "Aces Wild Card FNCS Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_aceswild"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_axeofchampions",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Axe of Champions Cup",
+      "content": "Axe of Champions Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_axeofchampions"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_crystal",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Champion Crystal FNCS Cup",
+      "content": "Champion Crystal FNCS Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_crystal"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_division2",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Division 2 Practice",
+      "content": "FNCS Division 2 Practice",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_division2"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_division3",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Division 3 Practice",
+      "content": "FNCS Division 3 Practice",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_division3"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_ranked_duosbr",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Duos Ranked Cup (Battle Royale)",
+      "content": "Duos Ranked Cup (Battle Royale)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_ranked_duosbr"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_reloadquick",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Reload Quick Cup (Reload)",
+      "content": "Reload Quick Cup (Reload)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_reloadquick"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_pj",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Champion PJ FNCS Cup",
+      "content": "Champion PJ FNCS Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_pj"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_playstation",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "PlayStation Cup",
+      "content": "PlayStation Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_playstation"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_ranked_duosreload",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Duos Ranked Cup (Reload)",
+      "content": "Duos Ranked Cup (Reload)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_ranked_duosreload"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_ranked_solobr",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Solo Ranked Cup (Battle Royale)",
+      "content": "Solo Ranked Cup (Battle Royale)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_ranked_solobr"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_surfwitch",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Champion Surf Witch FNCS Cup",
+      "content": "Champion Surf Witch FNCS Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_surfwitch"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_fncs_loserfruit",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Loserfruit Icon Cup",
+      "content": "FNCS Loserfruit Icon Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_fncs_loserfruit"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_elitezadie",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Elite Zadie Cup (Reload)",
+      "content": "Elite Zadie Cup (Reload)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_elitezadie"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_fncs_bugha",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Bugha Icon Cup",
+      "content": "FNCS Bugha Icon Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_fncs_bugha"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_fncs_clix",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Clix Icon Cup",
+      "content": "FNCS Clix Icon Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_fncs_clix"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_fncs_lachlan",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Lachlan Icon Cup",
+      "content": "FNCS Lachlan Icon Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_fncs_lachlan"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_delulu",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Delulu Early Access",
+      "content": "Delulu Early Access",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_delulu"
+      }
+    },
+    {
+      "id": "epic-tournament-s36_fncscommunity",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Champion Crystal FNCS Cup",
+      "content": "Champion Crystal FNCS Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s36_fncscommunity"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_redranger",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Red Ranger Cup",
+      "content": "Red Ranger Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_redranger"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_pinkranger",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Pink Ranger Cup",
+      "content": "Pink Ranger Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_pinkranger"
+      }
+    },
+    {
+      "id": "epic-tournament-s36_squidgrounds",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Squid Grounds Cup",
+      "content": "Squid Grounds Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s36_squidgrounds"
+      }
+    },
+    {
+      "id": "epic-tournament-s36_division2",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS",
+      "content": "FNCS Division 2",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s36_division2"
+      }
+    },
+    {
+      "id": "epic-tournament-s36_duosconsole",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Duos Console Victory Cash Cup",
+      "content": "Duos Console Victory Cash Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s36_duosconsole"
+      }
+    },
+    {
+      "id": "epic-tournament-s36_major3_group",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Major 3",
+      "content": "FNCS Major 3 Group Stage",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s36_major3_group"
+      }
+    },
+    {
+      "id": "epic-tournament-s36_ranked_duosreload",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Duos Ranked Cup (Reload)",
+      "content": "Duos Ranked Cup (Reload)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s36_ranked_duosreload"
+      }
+    },
+    {
+      "id": "epic-tournament-s36_ranked_triosbr",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Trios Ranked Cup (Battle Royale)",
+      "content": "Trios Ranked Cup (Battle Royale)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s36_ranked_triosbr"
+      }
+    },
+    {
+      "id": "epic-tournament-s36_playstation",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "PlayStation Cup",
+      "content": "PlayStation Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s36_playstation"
+      }
+    },
+    {
+      "id": "epic-tournament-s36_division3",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS",
+      "content": "FNCS Division 3",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s36_division3"
+      }
+    },
+    {
+      "id": "epic-tournament-s36_major3_finals",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Major 3",
+      "content": "FNCS Major 3 Finals",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s36_major3_finals"
+      }
+    },
+    {
+      "id": "epic-tournament-s36_major3_lcq",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Major 3",
+      "content": "FNCS Major 3 Last Chance Qualifier",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s36_major3_lcq"
+      }
+    },
+    {
+      "id": "epic-tournament-s36_major3_playin",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Major 3",
+      "content": "FNCS Major 3 Play-In",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s36_major3_playin"
+      }
+    },
+    {
+      "id": "epic-tournament-s36_ranked_solobr",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Solo Ranked Cup (Battle Royale)",
+      "content": "Solo Ranked Cup (Battle Royale)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s36_ranked_solobr"
+      }
+    },
+    {
+      "id": "epic-tournament-s36_division1",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS",
+      "content": "FNCS Division 1",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s36_division1"
+      }
+    },
+    {
+      "id": "epic-tournament-s36_squidcash",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Squid Grounds Cash Cup",
+      "content": "Squid Grounds Cash Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s36_squidcash"
+      }
+    },
+    {
+      "id": "epic-tournament-s36_fantasticfour",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Fantastic Four Cup",
+      "content": "Fantastic Four Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s36_fantasticfour"
+      }
+    },
+    {
+      "id": "epic-tournament-stage_0_2025_br",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "STAGE:0 Battle Royale",
+      "content": "STAGE:0 Battle Royale 2025",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "stage_0_2025_br"
+      }
+    },
+    {
+      "id": "epic-tournament-stage_0_2025_zb",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "STAGE:0 Zero Build",
+      "content": "STAGE:0 Zero Build 2025",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "stage_0_2025_zb"
+      }
+    },
+    {
+      "id": "epic-tournament-s35_fncsshowdown",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Showdown",
+      "content": "FNCS Showdown",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s35_fncsshowdown"
+      }
+    },
+    {
+      "id": "epic-tournament-s35_ranked_solo_pd",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Platinum & Diamond Ranked Cup (Solo BR)",
+      "content": "Platinum & Diamond Ranked Cup (Solo BR)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s35_ranked_solo_pd"
+      }
+    },
+    {
+      "id": "epic-tournament-s35_ranked_duos_pd",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Platinum & Diamond Ranked Cup (Duos BR)",
+      "content": "Platinum & Diamond Ranked Cup (Duos BR)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s35_ranked_duos_pd"
+      }
+    },
+    {
+      "id": "epic-tournament-s35_ranked_duosreload_pd",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Platinum & Diamond Ranked Cup (Duos Reload)",
+      "content": "Platinum & Diamond Ranked Cup (Duos Reload)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s35_ranked_duosreload_pd"
+      }
+    },
+    {
+      "id": "epic-tournament-s35_ranked_trios_pd",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Platinum & Diamond Ranked Cup (Trios BR)",
+      "content": "Platinum & Diamond Ranked Cup (Trios BR)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s35_ranked_trios_pd"
+      }
+    },
+    {
+      "id": "epic-tournament-s35_zadieranked_trios",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Elite Zadie Ranked Cup (Trios BR)",
+      "content": "Elite Zadie Ranked Cup (Trios BR)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s35_zadieranked_trios"
+      }
+    },
+    {
+      "id": "epic-tournament-s35_zadieranked_duosreload",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Elite Zadie Ranked Cup (Duos Reload)",
+      "content": "Elite Zadie Ranked Cup (Duos Reload)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s35_zadieranked_duosreload"
+      }
+    },
+    {
+      "id": "epic-tournament-s35_ranked_solo_bsg",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Bronze, Silver, & Gold Ranked Cup (Solo BR)",
+      "content": "Bronze, Silver, & Gold Ranked Cup (Solo BR)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s35_ranked_solo_bsg"
+      }
+    },
+    {
+      "id": "epic-tournament-s35_ranked_duosreload_bsg",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Bronze, Silver, & Gold Ranked Cup (Reload BR)",
+      "content": "Bronze, Silver, & Gold Ranked Cup (Reload BR)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s35_ranked_duosreload_bsg"
+      }
+    },
+    {
+      "id": "epic-tournament-s35_ranked_trios_bsg",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Bronze, Silver, & Gold Ranked Cup (Trios BR)",
+      "content": "Bronze, Silver, & Gold Ranked Cup (Trios BR)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s35_ranked_trios_bsg"
+      }
+    },
+    {
+      "id": "epic-tournament-s35_zadieranked_duos",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Elite Zadie Ranked Cup (Duos BR)",
+      "content": "Elite Zadie Ranked Cup (Duos BR)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s35_zadieranked_duos"
+      }
+    },
+    {
+      "id": "epic-tournament-s35_zadieranked_solo",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Elite Zadie Ranked Cup (Solo BR)",
+      "content": "Elite Zadie Ranked Cup (Solo BR)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s35_zadieranked_solo"
+      }
+    },
+    {
+      "id": "epic-tournament-s35_duosconsole",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Duos Console Victory Cash Cup",
+      "content": "Duos Console Victory Cash Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s35_duosconsole"
+      }
+    },
+    {
+      "id": "epic-tournament-s35_ranked_duos_bsg",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Bronze, Silver, & Gold Ranked Cup (Duos BR)",
+      "content": "Bronze, Silver, & Gold Ranked Cup (Duos BR)",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s35_ranked_duos_bsg"
+      }
+    },
+    {
+      "id": "epic-tournament-s35_fncs_loserfruit",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Loserfruit Icon Cup",
+      "content": "FNCS Loserfruit Icon Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s35_fncs_loserfruit"
+      }
+    },
+    {
+      "id": "epic-tournament-s35_fncs_lachlan",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Lachlan Icon Cup",
+      "content": "FNCS Lachlan Icon Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s35_fncs_lachlan"
+      }
+    },
+    {
+      "id": "epic-tournament-s35_fncs_bugha",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Bugha Icon Cup",
+      "content": "FNCS Bugha Icon Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s35_fncs_bugha"
+      }
+    },
+    {
+      "id": "epic-tournament-s35_fncs_clix",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Clix Icon Cup",
+      "content": "FNCS Clix Icon Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s35_fncs_clix"
+      }
+    },
+    {
+      "id": "epic-tournament-s35_proam_2025",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Pro-Am",
+      "content": "FNCS Pro-Am",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s35_proam_2025"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_gc_2025",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Fortnite Global Championship",
+      "content": "Fortnite Global Championship",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_gc_2025"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_zadiereload",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Elite Zadie Reload Cup",
+      "content": "Elite Zadie Reload Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_zadiereload"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_clix",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Clix Icon Cup",
+      "content": "Clix Icon Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_clix"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_thunderbolts",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Thunderbolts Cup",
+      "content": "Thunderbolts Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_thunderbolts"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_ohtani",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Shohei Ohtani Cup",
+      "content": "Shohei Ohtani Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_ohtani"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_lantern",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Lantern Fest Cup",
+      "content": "Lantern Fest Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_lantern"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_division2",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS",
+      "content": "FNCS Division 2",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_division2"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_major2_finals",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Major 2",
+      "content": "FNCS Major 2 Finals",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_major2_finals"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_major2_lcq",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Major 2",
+      "content": "FNCS Major 2 Last Chance Qualifier",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_major2_lcq"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_major2_playin",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Major 2",
+      "content": "FNCS Major 2 Play-In",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_major2_playin"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_og_cup",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "OG",
+      "content": "OG Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_og_cup"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_rankedcup_bsg_duos",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Bronze, Silver, & Gold Ranked Cup",
+      "content": "Bronze, Silver, & Gold Ranked Cup Duos",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_rankedcup_bsg_duos"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_rankedcup_elite_solo",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Elite+ Ranked Cup",
+      "content": "Elite+ Ranked Cup Solo",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_rankedcup_elite_solo"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_rankedcup_pd_solo",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Platinum & Diamond Ranked Cup",
+      "content": "Platinum & Diamond Ranked Cup Solo",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_rankedcup_pd_solo"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_og_cupzb",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "ZB OG",
+      "content": "ZB OG Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_og_cupzb"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_perfeval",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Fortnite",
+      "content": "Fortnite Performance Evaluation",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_perfeval"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_rankedcup_bsg_solo",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Bronze, Silver, & Gold Ranked Cup",
+      "content": "Bronze, Silver, & Gold Ranked Cup Solo",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_rankedcup_bsg_solo"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_rankedcup_pd_duos",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Platinum & Diamond Ranked Cup",
+      "content": "Platinum & Diamond Ranked Cup Duos",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_rankedcup_pd_duos"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_solocash",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Solo",
+      "content": "Solo Cash Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_solocash"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_division1",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS",
+      "content": "FNCS Division 1",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_division1"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_division3",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS",
+      "content": "FNCS Division 3",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_division3"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_major2_group",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Major 2",
+      "content": "FNCS Major 2 Group Stage",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_major2_group"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_reloadopen",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Reload",
+      "content": "Reload Open Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_reloadopen"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_perfeval_reload",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Fortnite Reload",
+      "content": "Fortnite Reload Performance Evaluation",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_perfeval_reload"
+      }
+    },
+    {
+      "id": "epic-tournament-s37_perfeval",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Fortnite",
+      "content": "Fortnite Performance Evaluation",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s37_perfeval"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_fncscommunity",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Aces Wild Card",
+      "content": "Aces Wild Card FNCS Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_fncscommunity"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_fncscommunity_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Aces Wild Card",
+      "content": "Aces Wild Card FNCS Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_fncscommunity_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_fncscommunity",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Champion PJ FNCS Cup",
+      "content": "Champion PJ FNCS Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_fncscommunity"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_ogcommunitycup",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "OG Community Cup",
+      "content": "OG Community Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_ogcommunitycup"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_ogcommunitycup_zb",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "OG Community Cup",
+      "content": "OG Community Cup ZB",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_ogcommunitycup_zb"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_ogcommunitycup_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "OG Community Cup",
+      "content": "OG Community Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_ogcommunitycup_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_ogcommunitycup_zb_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "OG Community Cup",
+      "content": "OG Community Cup ZB",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_ogcommunitycup_zb_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_og_cup",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "OG",
+      "content": "OG Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_og_cup"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_og_cupzb",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "ZB OG",
+      "content": "ZB OG Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_og_cupzb"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_og_cup_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "OG",
+      "content": "OG Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_og_cup_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_og_cupzb_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "ZB OG",
+      "content": "ZB OG Cup",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_og_cupzb_test"
+      }
+    },
+    {
+      "id": "epic-tournament-the_testing_test_tester_in_need_of_testing",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Test testing tested by testing testers who tested the test which tested the test to test testing test test test test test test testing test test",
+      "content": "Test testing tested by testing testers who tested the test which tested the test to test testing test test test test test test testing test test Test testing tested by testing testers who tested the test which tested the test to test testing test test test test test test testing test test",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "the_testing_test_tester_in_need_of_testing"
+      }
+    },
+    {
+      "id": "epic-tournament-The_Testing_Test_Cup_Cup",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "The Testing Cup Cup",
+      "content": "The Testing Cup Cup Test",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "The_Testing_Test_Cup_Cup"
+      }
+    },
+    {
+      "id": "epic-tournament-Testing_the_test_cup_for_testing_reasons",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Testing Cup",
+      "content": "Testing Cup Test",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "Testing_the_test_cup_for_testing_reasons"
+      }
+    },
+    {
+      "id": "epic-tournament-Testing_Test_Cup",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Testing Cup",
+      "content": "Testing Cup Test",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "Testing_Test_Cup"
+      }
+    },
+    {
+      "id": "epic-tournament-The_cup_of_testing_all_of_test_cups",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Testing Cup",
+      "content": "Testing Cup Test",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "The_cup_of_testing_all_of_test_cups"
+      }
+    },
+    {
+      "id": "epic-tournament-The_testing_test_of_testers_cup",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Testing Cup",
+      "content": "Testing Cup Test",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "The_testing_test_of_testers_cup"
+      }
+    },
+    {
+      "id": "epic-tournament-the_testing_cup_cup",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Testing Cup",
+      "content": "Testing Cup Test",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "the_testing_cup_cup"
+      }
+    },
+    {
+      "id": "epic-tournament-testing_cup",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Testing Cup",
+      "content": "Testing Cup Test",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "testing_cup"
+      }
+    },
+    {
+      "id": "epic-tournament-test_cup",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Test",
+      "content": "Test DinoDaddy",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "test_cup"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_rankedcup_bs_solo",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Bronze & Silver Ranked Cup",
+      "content": "Bronze & Silver Ranked Cup Solo",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_rankedcup_bs_solo"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_rankedcup_bsg_duos",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Bronze, Silver, & Gold Ranked Cup",
+      "content": "Bronze, Silver, & Gold Ranked Cup Duos",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_rankedcup_bsg_duos"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_division2",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS",
+      "content": "FNCS Division 2",
+      "created_at": "2025-11-05T01:35:55.872Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_division2"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_major1_finals",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Major 1",
+      "content": "FNCS Major 1 Finals",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_major1_finals"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_major1_playin",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Major 1",
+      "content": "FNCS Major 1 Play-In",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_major1_playin"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_perfeval",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Fortnite",
+      "content": "Fortnite Performance Evaluation",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_perfeval"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_rankedcup_elite_solo",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Elite+ Ranked Cup",
+      "content": "Elite+ Ranked Cup Solo",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_rankedcup_elite_solo"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_playstation",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "PlayStation Cup",
+      "content": "PlayStation Cup",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_playstation"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_rankedcup_elite_duos",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Elite+ Ranked Cup",
+      "content": "Elite+ Ranked Cup Duos",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_rankedcup_elite_duos"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_rankedcup_bsg_solo",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Bronze, Silver, & Gold Ranked Cup",
+      "content": "Bronze, Silver, & Gold Ranked Cup Solo",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_rankedcup_bsg_solo"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_rankedcup_pd_duos",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Platinum & Diamond Ranked Cup",
+      "content": "Platinum & Diamond Ranked Cup Duos",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_rankedcup_pd_duos"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_rankedcup_pd_solo",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Platinum & Diamond Ranked Cup",
+      "content": "Platinum & Diamond Ranked Cup Solo",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_rankedcup_pd_solo"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_solocash",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Solo",
+      "content": "Solo Cash Cup",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_solocash"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_division1",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS",
+      "content": "FNCS Division 1",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_division1"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_division3",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS",
+      "content": "FNCS Division 3",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_division3"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_fncs_trial",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS",
+      "content": "FNCS Trial",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_fncs_trial"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_major1_group",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Major 1",
+      "content": "FNCS Major 1 Group Stage",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_major1_group"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_major1_lcq",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Major 1",
+      "content": "FNCS Major 1 Last Chance Qualifier",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_major1_lcq"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_division1_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS",
+      "content": "FNCS Division 1",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_division1_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_division2_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS",
+      "content": "FNCS Division 2",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_division2_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_division3_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS",
+      "content": "FNCS Division 3",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_division3_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_fncs_trial_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS",
+      "content": "FNCS Trial",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_fncs_trial_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_major1_finals_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Major 1",
+      "content": "FNCS Major 1 Finals",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_major1_finals_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_major1_group_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Major 1",
+      "content": "FNCS Major 1 Group Stage",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_major1_group_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_major1_lcq_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Major 1",
+      "content": "FNCS Major 1 Last Chance Qualifier",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_major1_lcq_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_major1_playin_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS Major 1",
+      "content": "FNCS Major 1 Play-In",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_major1_playin_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_perfeval_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Fortnite",
+      "content": "Fortnite Performance Evaluation",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_perfeval_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_playstation_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "PlayStation Cup",
+      "content": "PlayStation Cup",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_playstation_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_rankedcup_bs_solo_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Bronze & Silver Ranked Cup",
+      "content": "Bronze & Silver Ranked Cup Solo",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_rankedcup_bs_solo_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_rankedcup_bsg_duos_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Bronze, Silver, & Gold Ranked Cup",
+      "content": "Bronze, Silver, & Gold Ranked Cup Duos",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_rankedcup_bsg_duos_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_rankedcup_bsg_solo_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Bronze, Silver, & Gold Ranked Cup",
+      "content": "Bronze, Silver, & Gold Ranked Cup Solo",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_rankedcup_bsg_solo_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_rankedcup_elite_duos_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Elite+ Ranked Cup",
+      "content": "Elite+ Ranked Cup Duos",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_rankedcup_elite_duos_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_rankedcup_elite_solo_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Elite+ Ranked Cup",
+      "content": "Elite+ Ranked Cup Solo",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_rankedcup_elite_solo_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_rankedcup_pd_duos_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Platinum & Diamond Ranked Cup",
+      "content": "Platinum & Diamond Ranked Cup Duos",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_rankedcup_pd_duos_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_rankedcup_pd_solo_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Platinum & Diamond Ranked Cup",
+      "content": "Platinum & Diamond Ranked Cup Solo",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_rankedcup_pd_solo_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s33_solocash_test",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Solo",
+      "content": "Solo Cash Cup",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s33_solocash_test"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_rankedcup_elite_duos",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Elite+ Ranked Cup",
+      "content": "Elite+ Ranked Cup Duos",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_rankedcup_elite_duos"
+      }
+    },
+    {
+      "id": "epic-tournament-s34_playstation",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "PlayStation Cup",
+      "content": "PlayStation Cup",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s34_playstation"
+      }
+    },
+    {
+      "id": "epic-tournament-bettotest_aqua",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "BettoTest Last",
+      "content": "BettoTest Last Chance Qualifier",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "bettotest_aqua"
+      }
+    },
+    {
+      "id": "epic-tournament-bettotest_aqua_me",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "BettoTest Aqua",
+      "content": "BettoTest Aqua for Middle East",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "bettotest_aqua_me"
+      }
+    },
+    {
+      "id": "epic-tournament-bettotest_aqua_brme",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "BettoTest Aqua",
+      "content": "BettoTest Aqua for Brazil and Middle East",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "bettotest_aqua_brme"
+      }
+    },
+    {
+      "id": "epic-tournament-bettotest_aqua_br",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "BettoTest Aqua",
+      "content": "BettoTest Aqua for Brazil",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "bettotest_aqua_br"
+      }
+    },
+    {
+      "id": "epic-tournament-s29_riseofmidas",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Rise of Midas",
+      "content": "Rise of Midas Cup",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s29_riseofmidas"
+      }
+    },
+    {
+      "id": "epic-tournament-s25_victorycash_solobr",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "Solo",
+      "content": "Solo Victory Cup",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s25_victorycash_solobr"
+      }
+    },
+    {
+      "id": "epic-tournament-s12_fncs_week4_large",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS",
+      "content": "FNCS WEEK 4",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s12_fncs_week4_large"
+      }
+    },
+    {
+      "id": "epic-tournament-s12_fncs_week3_large",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS",
+      "content": "FNCS WEEK 3",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s12_fncs_week3_large"
+      }
+    },
+    {
+      "id": "epic-tournament-s12_fncs_week2_large",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS",
+      "content": "FNCS WEEK 2",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s12_fncs_week2_large"
+      }
+    },
+    {
+      "id": "epic-tournament-s12_fncs_week1_large",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "FNCS",
+      "content": "FNCS WEEK 1",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "s12_fncs_week1_large"
+      }
+    },
+    {
+      "id": "epic-tournament-testlemming_solo",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "TEST",
+      "content": "TEST Lemming",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "testlemming_solo"
+      }
+    },
+    {
+      "id": "epic-tournament-limited_test_event_solo",
+      "source": "epic",
+      "author": "Epic Games",
+      "title": "LIMITED",
+      "content": "LIMITED TESTING EVENT",
+      "created_at": "2025-11-05T01:35:55.873Z",
+      "tags": [
+        "tournament",
+        "competitive",
+        "official"
+      ],
+      "metadata": {
+        "type": "tournament",
+        "displayId": "limited_test_event_solo"
+      }
+    },
+    {
+      "id": "fnapi-news-br-f3c064b261d946546c875977b25a67f5",
+      "source": "fortnite-api",
+      "author": "Fortnite-API.com",
+      "title": "Welcome to Springfield!",
+      "content": "Step through realities and right into Springfield Island! With a Zero Point shard in Homer’s control, the Island will only get more chaotic each week until someone (or something) can put a stop to the Zero Point’s power…",
+      "created_at": "2025-11-05T01:35:56.140Z",
+      "tags": [
+        "news",
+        "battle-royale",
+        "api"
+      ],
+      "metadata": {
+        "type": "br-news",
+        "image": "https://cdn-live.prm.ol.epicgames.com/prod/2312843a02a32fe9e3b43a127c703da27c0b83e859e053505dc9a68ac726ccdef2c3853c7416ecf83f054fe6ea412d00-f47f32b8-36fe-4581-b669-5537e6e56476.jpeg?width=1920&height=1080&aspect=fill"
+      }
+    },
+    {
+      "id": "fnapi-news-br-8da2b91dc07c8d3fdb7070a9c5626d4e",
+      "source": "fortnite-api",
+      "author": "Fortnite-API.com",
+      "title": "Springfield Battle Pass",
+      "content": "Woo-hoo! Battle Pass holders this Season will instantly unlock the Peels Sidekick and get access to more premium rewards - including Simpsons Outfits.",
+      "created_at": "2025-11-05T01:35:56.140Z",
+      "tags": [
+        "news",
+        "battle-royale",
+        "api"
+      ],
+      "metadata": {
+        "type": "br-news",
+        "image": "https://cdn-live.prm.ol.epicgames.com/prod/2312843a02a32fe9e3b43a127c703da2088f3ef087468df61029583b05b4cc4e3bfb3d546e5776dd7c9be86470f47dad-ad463672-abbf-42c2-8d5f-297cd7192f30.jpeg?width=1920&height=1080&aspect=fill"
+      }
+    },
+    {
+      "id": "fnapi-news-br-044ae3113d799dc29b5a2c97b2b00d03",
+      "source": "fortnite-api",
+      "author": "Fortnite-API.com",
+      "title": "Mixtape Music Pass",
+      "content": "Unlock free and premium rewards in the Mixtape Music Pass by earning XP in any Fortnite experience. Purchase the Pass for only 1,400 V-Bucks or access it with Fortnite Crew to earn premium rewards. Music Pass holders instantly unlock the Sedona Outfit!",
+      "created_at": "2025-11-05T01:35:56.140Z",
+      "tags": [
+        "news",
+        "battle-royale",
+        "api"
+      ],
+      "metadata": {
+        "type": "br-news",
+        "image": "https://cdn-live.prm.ol.epicgames.com/prod/6d9dfd45d698b70d9a08d360d7c518e9be6bb3256abdd4d413e57d13f3635a07cf9ec7119bcb6fc77055c86902df389ba97f4538191d1d40eb19abc3ef287852-71b3a785-e99a-4ff6-a97c-d8c52a509417.jpeg?width=1920&height=1080&aspect=fill"
+      }
+    },
+    {
+      "id": "fnapi-news-br-298421af9800c2316343ca5eeab9d52f",
+      "source": "fortnite-api",
+      "author": "Fortnite-API.com",
+      "title": "Follow the Butterfly on November 8",
+      "content": "Small wings that create huge ripples across reality. Load into OG on November 8 before 2 PM ET to experience the dimension-warping effects of the butterfly!",
+      "created_at": "2025-11-05T01:35:56.140Z",
+      "tags": [
+        "news",
+        "battle-royale",
+        "api"
+      ],
+      "metadata": {
+        "type": "br-news",
+        "image": "https://cdn-live.prm.ol.epicgames.com/prod/54a60bc460941946bd4337f89ff08703f5e682c013117d7ffc57d2aeacb93b53a576719c010cc788a8a87773f354766ea726c3bdf0bc5bc695aa45af682645987e338763580b9f54704c9fe5e9754b76-cc9c7559-7638-4b69-becb-fd787002f259.jpeg?width=1920&height=1080&aspect=fill"
+      }
+    },
+    {
+      "id": "fnapi-news-br-784da4f2d8737b7984ebe2b29c712b9b",
+      "source": "fortnite-api",
+      "author": "Fortnite-API.com",
+      "title": "Bart Simpson",
+      "content": "Don’t have a cow, man.",
+      "created_at": "2025-11-05T01:35:56.140Z",
+      "tags": [
+        "news",
+        "battle-royale",
+        "api"
+      ],
+      "metadata": {
+        "type": "br-news",
+        "image": "https://cdn-live.prm.ol.epicgames.com/prod/2312843a02a32fe9e3b43a127c703da2f4a979b591f3536b5778784e5a2fe8494b6a424ed3960f208c24b039f45507cb-5e94d6d0-2076-4e5e-90d1-6b9b480d5ea4.jpeg?width=1920&height=1080&aspect=fill"
+      }
+    },
+    {
+      "id": "news-fortnite-insider-https://fortniteinsider.com/?p=212986",
+      "source": "news",
+      "author": "Fortnite Insider",
+      "title": "Daily ‘Octordle’ Answers 1381 November 5th, 2025 – Hints and Solutions (11/5/25)",
+      "content": "Here are the answers for the Octordle words #1381 today, released on November 5th, 2025 and some hints to help you solve them. Octordle is a difficult game in which players must guess eight five-letter words at the same time while only having thirteen guesses! The game functions similarly to Wordle in that there are no […] The post Daily ‘Octordle’ Answers 1381 November 5th, 2025 – Hints and Solutions (11/5/25) appeared first on Fortnite Insider.",
+      "created_at": "2025-11-04T18:04:19.000Z",
+      "url": "https://fortniteinsider.com/daily-octordle-answers-1381-november-5th-2025-hints-and-solutions-11-5-25/",
+      "tags": [
+        "news",
+        "other"
+      ],
+      "metadata": {
+        "feedName": "Fortnite Insider",
+        "categories": [
+          "Other"
+        ],
+        "creator": "Khadija Saifi"
+      }
+    },
+    {
+      "id": "news-fortnite-insider-https://fortniteinsider.com/?p=212982",
+      "source": "news",
+      "author": "Fortnite Insider",
+      "title": "Today’s ‘Word Hurdle’ 2777 and 2778 – November 5th, 2025 Answers and Hints",
+      "content": "Here are the answers and hints for the Word Hurdle words #2777 (morning) and #2778 (afternoon) for today, released on November 5th, 2025. Word Hurdle is a game that was previously known as Wordle 2 but has now joined the Solitaired games website. In this game, players must guess the six-letter word in six or fewer […] The post Today’s ‘Word Hurdle’ 2777 and 2778 – November 5th, 2025 Answers and Hints appeared first on Fortnite Insider.",
+      "created_at": "2025-11-04T17:54:26.000Z",
+      "url": "https://fortniteinsider.com/todays-word-hurdle-2777-and-2778-november-5th-2025-answers-and-hints/",
+      "tags": [
+        "news",
+        "other"
+      ],
+      "metadata": {
+        "feedName": "Fortnite Insider",
+        "categories": [
+          "Other"
+        ],
+        "creator": "Khadija Saifi"
+      }
+    },
+    {
+      "id": "news-fortnite-insider-https://fortniteinsider.com/?p=212977",
+      "source": "news",
+      "author": "Fortnite Insider",
+      "title": "Today’s ‘Phoodle’ Answer: November 5th 2025 – #1277 Hints and Solution",
+      "content": "Here is the answer to the Phoodle 1277 word for today, released on November 5th, 2025, and some hints to help you solve it. Phoodle is another Wordle-inspired game we have found, which is another food-related game. Players need to guess the five-letter food-related term, which can be anything from appliances to famous chefs and more. […] The post Today’s ‘Phoodle’ Answer: November 5th 2025 – #1277 Hints and Solution appeared first on Fortnite Insider.",
+      "created_at": "2025-11-04T17:50:57.000Z",
+      "url": "https://fortniteinsider.com/todays-phoodle-answer-november-5th-2025-1277-hints-and-solution/",
+      "tags": [
+        "news",
+        "other"
+      ],
+      "metadata": {
+        "feedName": "Fortnite Insider",
+        "categories": [
+          "Other"
+        ],
+        "creator": "Khadija Saifi"
+      }
+    },
+    {
+      "id": "news-fortnite-insider-https://fortniteinsider.com/?p=212973",
+      "source": "news",
+      "author": "Fortnite Insider",
+      "title": "Quordle Answers Today November 5th 2025 – 1381 Hints",
+      "content": "Here are our hints and the answers for Quordle 1381, the four-word puzzle released today, on 5th November 2025. Quordle has become a huge success after being released as a prototype with a number of bugs and usability issues at the end of January. It has now been taken over by Merriam-Webster. It is the […] The post Quordle Answers Today November 5th 2025 – 1381 Hints appeared first on Fortnite Insider.",
+      "created_at": "2025-11-04T17:47:22.000Z",
+      "url": "https://fortniteinsider.com/quordle-answers-today-november-5th-2025-1381-hints/",
+      "tags": [
+        "news",
+        "other"
+      ],
+      "metadata": {
+        "feedName": "Fortnite Insider",
+        "categories": [
+          "Other"
+        ],
+        "creator": "Khadija Saifi"
+      }
+    },
+    {
+      "id": "news-fortnite-insider-https://fortniteinsider.com/?p=212969",
+      "source": "news",
+      "author": "Fortnite Insider",
+      "title": "‘Contexto’ Answer Today November 5th 2025 – 1144 Hints and Solution (11/5/25)",
+      "content": "Here is the Contexto answer today for the 1144 puzzle, released on November 5th, 2024 and some hints to help you solve it. There are many games that have been inspired by the viral word game Wordle with some of the more well-known games being Quordle, Globle, Heardle and Nerdle. All of these games have their […] The post ‘Contexto’ Answer Today November 5th 2025 – 1144 Hints and Solution (11/5/25) appeared first on Fortnite Insider.",
+      "created_at": "2025-11-04T17:42:17.000Z",
+      "url": "https://fortniteinsider.com/contexto-answer-today-november-5th-2025-1144-hints-and-solution-11-5-25/",
+      "tags": [
+        "news",
+        "other"
+      ],
+      "metadata": {
+        "feedName": "Fortnite Insider",
+        "categories": [
+          "Other"
+        ],
+        "creator": "Khadija Saifi"
+      }
+    },
+    {
+      "id": "news-fortnite-insider-https://fortniteinsider.com/?p=212965",
+      "source": "news",
+      "author": "Fortnite Insider",
+      "title": "NYT ‘Strands’ Answers Today #612, Spangram November 5th, 2025 – Word Solutions & Hints (11/5/25)",
+      "content": "Here are the answers for the NYT Strands puzzle #612 today, released on November 5th, 2025, and some hints to help you solve them. The New York Times are known for the wide range of games they publish for readers to complete on the daily. They had also published the viral word game, Wordle, in 2022, […] The post NYT ‘Strands’ Answers Today #612, Spangram November 5th, 2025 – Word Solutions & Hints (11/5/25) appeared first on Fortnite Insider.",
+      "created_at": "2025-11-04T17:28:24.000Z",
+      "url": "https://fortniteinsider.com/nyt-strands-answers-today-612-spangram-november-5th-2025-word-solutions-hints-11-5-25/",
+      "tags": [
+        "news",
+        "other"
+      ],
+      "metadata": {
+        "feedName": "Fortnite Insider",
+        "categories": [
+          "Other"
+        ],
+        "creator": "Khadija Saifi"
+      }
+    },
+    {
+      "id": "news-fortnite-insider-https://fortniteinsider.com/?p=212961",
+      "source": "news",
+      "author": "Fortnite Insider",
+      "title": "‘NYT Connections’ Answers Today November 5th, 2025 – 878 Hints and Solutions (11/5/25)",
+      "content": "Here are the answers for the NYT Connections puzzle #878 today, released on November 5th, 2025, and some hints to help you solve them. New York Times have a variety of puzzle games available for their readers and there are new puzzles to play on a daily basis. One of these games is called Connections. […] The post ‘NYT Connections’ Answers Today November 5th, 2025 – 878 Hints and Solutions (11/5/25) appeared first on Fortnite Insider.",
+      "created_at": "2025-11-04T17:19:52.000Z",
+      "url": "https://fortniteinsider.com/nyt-connections-answers-today-november-5th-2025-878-hints-and-solutions-11-5-25/",
+      "tags": [
+        "news",
+        "other"
+      ],
+      "metadata": {
+        "feedName": "Fortnite Insider",
+        "categories": [
+          "Other"
+        ],
+        "creator": "Khadija Saifi"
+      }
+    },
+    {
+      "id": "news-fortnite-insider-https://fortniteinsider.com/?p=212957",
+      "source": "news",
+      "author": "Fortnite Insider",
+      "title": "‘Weaver’ Answer Today Silo to Corn: November 5th 2025 Hints and Solution",
+      "content": "Here is the answer to the Weaver puzzle today, silo to corn, released on November 5th 2025, and some hints to help you solve it. Weaver is an online puzzle game where players are given two words and the aim of the game is to ‘weave’ your way from the first word to the second […] The post ‘Weaver’ Answer Today Silo to Corn: November 5th 2025 Hints and Solution appeared first on Fortnite Insider.",
+      "created_at": "2025-11-04T17:12:13.000Z",
+      "url": "https://fortniteinsider.com/weaver-answer-today-silo-to-corn-november-5th-2025-hints-and-solution/",
+      "tags": [
+        "news",
+        "other"
+      ],
+      "metadata": {
+        "feedName": "Fortnite Insider",
+        "categories": [
+          "Other"
+        ],
+        "creator": "Khadija Saifi"
+      }
+    },
+    {
+      "id": "news-fortnite-insider-https://fortniteinsider.com/?p=212906",
+      "source": "news",
+      "author": "Fortnite Insider",
+      "title": "‘Wordle’ Answer Today 1600 November 5th 2025 – Hints and Solution (11/5/25)",
+      "content": "Here is the Wordle answer today for the 1600 word, released on November 5th, 2025 and some hints to help you solve it. Wordle is a very popular word game that has gone viral due to the results being posted all over social media by players and the simplicity of the game. The aim is […] The post ‘Wordle’ Answer Today 1600 November 5th 2025 – Hints and Solution (11/5/25) appeared first on Fortnite Insider.",
+      "created_at": "2025-11-04T17:06:03.000Z",
+      "url": "https://fortniteinsider.com/wordle-answer-today-1600-november-5th-2025-hints-and-solution-11-5-25/",
+      "tags": [
+        "news",
+        "other"
+      ],
+      "metadata": {
+        "feedName": "Fortnite Insider",
+        "categories": [
+          "Other"
+        ],
+        "creator": "Khadija Saifi"
+      }
+    },
+    {
+      "id": "news-fortnite-insider-https://fortniteinsider.com/?p=212901",
+      "source": "news",
+      "author": "Fortnite Insider",
+      "title": "Daily ‘Octordle’ Answers 1380 November 4th, 2025 – Hints and Solutions (11/4/25)",
+      "content": "Here are the answers for the Octordle words #1380 today, released on November 4th, 2025 and some hints to help you solve them. Octordle is a difficult game in which players must guess eight five-letter words at the same time while only having thirteen guesses! The game functions similarly to Wordle in that there are no […] The post Daily ‘Octordle’ Answers 1380 November 4th, 2025 – Hints and Solutions (11/4/25) appeared first on Fortnite Insider.",
+      "created_at": "2025-11-03T20:32:17.000Z",
+      "url": "https://fortniteinsider.com/daily-octordle-answers-1380-november-4th-2025-hints-and-solutions-11-4-25/",
+      "tags": [
+        "news",
+        "other"
+      ],
+      "metadata": {
+        "feedName": "Fortnite Insider",
+        "categories": [
+          "Other"
+        ],
+        "creator": "Khadija Saifi"
+      }
+    }
+  ],
+  "lastUpdate": "2025-11-05T01:35:57.247Z",
+  "stats": {
+    "totalRecords": 204,
+    "recordsBySource": {
+      "twitter": 0,
+      "epic": 189,
+      "fortnite-api": 5,
+      "reddit": 0,
+      "news": 10,
+      "analytics": 0
+    },
+    "lastIngestion": "2025-11-05T01:35:57.247Z",
+    "oldestRecord": "2025-11-03T20:32:17.000Z",
+    "newestRecord": "2025-11-05T01:35:56.140Z"
+  }
+}

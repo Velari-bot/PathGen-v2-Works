@@ -1,0 +1,203 @@
+[
+  {
+    "id": "doc-duos-guide",
+    "title": "Duos Fighting Guide",
+    "content": "duos-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-02-23T14:59:00Z",
+    "tags": ["duos", "fighting", "pinching", "positioning", "layering", "timing"]
+  },
+  {
+    "id": "doc-high-ping-guide",
+    "title": "How to play on high ping",
+    "content": "high-ping-guide.txt",
+    "author": "Coach Oli",
+    "created_at": "2025-10-18T15:01:00Z",
+    "tags": ["high ping", "network", "settings", "latency", "optimization", "igl"]
+  },
+  {
+    "id": "doc-eor-guide",
+    "title": "Edit on Release (EOR) Guide",
+    "content": "eor-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-04-29T20:36:00Z",
+    "tags": ["eor", "edit on release", "settings", "mechanics", "crosshair"]
+  },
+  {
+    "id": "doc-wall-taking-guide",
+    "title": "Wall Taking Guide",
+    "content": "wall-taking-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-02-23T15:01:00Z",
+    "tags": ["wall taking", "fighting", "box fighting", "mechanics"]
+  },
+  {
+    "id": "doc-landing-center-guide",
+    "title": "Landing Center Strategy Guide",
+    "content": "landing-center-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-04-30T21:13:00Z",
+    "tags": ["landing", "positioning", "center", "strategy", "rotation"]
+  },
+  {
+    "id": "doc-claw-guide",
+    "title": "Claw Controller Guide",
+    "content": "claw-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-07-13T04:38:00Z",
+    "tags": ["claw", "controller", "binds", "settings"]
+  },
+  {
+    "id": "doc-vod-review-guide",
+    "title": "VOD Review Guide",
+    "content": "vod-review-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-10-26T19:10:00Z",
+    "tags": ["vod review", "improvement", "replay", "analysis"]
+  },
+  {
+    "id": "doc-warmup-practice-guide",
+    "title": "Warmup and Practice Guide",
+    "content": "warmup-practice-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-07-24T21:12:00Z",
+    "tags": ["warmup", "practice", "training", "routine", "mechanics"]
+  },
+  {
+    "id": "doc-bad-habits-guide",
+    "title": "Bad Habits and How to Fix Them",
+    "content": "bad-habits-guide.txt",
+    "author": "Coach Oli",
+    "created_at": "2025-08-28T11:21:00Z",
+    "tags": ["bad habits", "over peeking", "left hand peek", "mistakes"]
+  },
+  {
+    "id": "doc-height-positioning-guide",
+    "title": "Height and Positioning Guide",
+    "content": "height-positioning-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-10-24T04:17:00Z",
+    "tags": ["height", "positioning", "high ground", "mid ground", "retakes"]
+  },
+  {
+    "id": "doc-low-ground-guide",
+    "title": "Low Ground Guide",
+    "content": "low-ground-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-10-28T20:27:00Z",
+    "tags": ["low ground", "positioning", "strategy"]
+  },
+  {
+    "id": "doc-aim-training-guide",
+    "title": "Aim Training Guide",
+    "content": "aim-training-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-04-30T21:34:00Z",
+    "tags": ["aim", "training", "kovaaks", "controller", "aim assist"]
+  },
+  {
+    "id": "doc-w-keying-guide",
+    "title": "W-Keying Guide",
+    "content": "w-keying-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-04-30T21:34:00Z",
+    "tags": ["w-key", "aggressive", "fighting", "fragger"]
+  },
+  {
+    "id": "doc-crosshair-placement-guide",
+    "title": "Crosshair Placement Guide",
+    "content": "crosshair-placement-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-11-02T15:03:00Z",
+    "tags": ["crosshair", "placement", "editing", "mechanics"]
+  },
+  {
+    "id": "doc-earnings-claim-guide",
+    "title": "How to Claim Earnings",
+    "content": "earnings-claim-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-11-13T19:50:00Z",
+    "tags": ["earnings", "prizes", "competitive", "epic games"]
+  },
+  {
+    "id": "doc-creative-transfer-guide",
+    "title": "Transfer Creative Skills to Real Games",
+    "content": "creative-transfer-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-04-30T22:02:00Z",
+    "tags": ["creative", "transfer", "practice", "improvement"]
+  },
+  {
+    "id": "doc-storm-surge-guide",
+    "title": "Storm Surge Guide",
+    "content": "storm-surge-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-03-25T22:56:00Z",
+    "tags": ["storm surge", "competitive", "damage", "strategy"]
+  },
+  {
+    "id": "doc-refreshes-guide",
+    "title": "Refreshes Guide",
+    "content": "refreshes-guide.txt",
+    "author": "Coach Oli",
+    "created_at": "2025-10-18T14:46:00Z",
+    "tags": ["refreshes", "eliminations", "resources", "strategy"]
+  },
+  {
+    "id": "doc-tarping-guide",
+    "title": "Tarping Guide",
+    "content": "tarping-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-09-15T21:24:00Z",
+    "tags": ["tarping", "building", "rotation", "competitive"]
+  },
+  {
+    "id": "doc-stretched-res-guide",
+    "title": "Stretched Resolution Guide",
+    "content": "stretched-res-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-09-15T21:28:00Z",
+    "tags": ["stretched resolution", "settings", "fps", "performance"]
+  },
+  {
+    "id": "doc-support-role-guide",
+    "title": "Support Role Guide",
+    "content": "support-role-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-09-15T21:28:00Z",
+    "tags": ["support", "trios", "role", "team", "resources"]
+  },
+  {
+    "id": "doc-igl-guide",
+    "title": "IGL (In Game Leader) Guide",
+    "content": "igl-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-09-15T21:28:00Z",
+    "tags": ["igl", "leader", "trios", "strategy", "positioning"]
+  },
+  {
+    "id": "doc-mechanics-maps-guide",
+    "title": "Mechanics Training Maps",
+    "content": "mechanics-maps-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-09-15T20:42:00Z",
+    "tags": ["mechanics", "maps", "training", "creative", "codes"]
+  },
+  {
+    "id": "doc-ranked-guide",
+    "title": "Ranked Mode Guide",
+    "content": "ranked-guide.txt",
+    "author": "Coach Goat",
+    "created_at": "2025-11-03T22:21:00Z",
+    "tags": ["ranked", "rank", "placement", "eliminations", "strategy"]
+  },
+  {
+    "id": "doc-tournament-strategy-guide",
+    "title": "Tournament Strategy Guide",
+    "content": "tournament-strategy-guide.txt",
+    "author": "Kinch",
+    "created_at": "2024-01-21T19:51:00Z",
+    "tags": ["tournament", "strategy", "matchmaking", "pbmm", "queue", "competitive", "starting late", "final queue", "w-key", "placement"]
+  }
+]
+
