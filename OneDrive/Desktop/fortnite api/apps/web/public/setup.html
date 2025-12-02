@@ -373,7 +373,8 @@
         // Discord OAuth configuration
         const DISCORD_CLIENT_ID = '1430744947732250726';
         const DISCORD_CLIENT_SECRET = ''; // This should be on backend only
-        const REDIRECT_URI = window.location.origin + '/setup.html';
+        // Normalize redirect URI to match what's registered in Discord
+        const REDIRECT_URI = window.location.href.split('?')[0]; // Use current URL without query params
 
         // Handle Discord OAuth callback
         async function handleDiscordCallback() {
