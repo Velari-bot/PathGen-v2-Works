@@ -1235,6 +1235,191 @@
         </div>
     </section>
 
+    <!-- Enhanced AI Coaching Experience Section -->
+    <section class="enhanced-experience-section">
+        <div class="experience-container">
+            <!-- Text Content (Left) -->
+            <div class="experience-text">
+                <h2 class="experience-title">Enhanced <span class="experience-highlight">AI Coaching</span> Experience</h2>
+                <p class="experience-description">
+                    Our mission is to deliver an exceptional AI-powered Fortnite coaching experience to players worldwide. 
+                    We utilize advanced GPT-4 models and real-time data to provide personalized coaching sessions that adapt 
+                    to your playstyle. Our dedicated development team works tirelessly to enhance the AI's capabilities and 
+                    introduce new features. Additionally, we have a vibrant community of players who support one another, 
+                    offering assistance and sharing valuable strategies. From replay analysis to voice coaching, live tournament 
+                    tracking to meta updates — PathGen delivers comprehensive coaching around the clock, completely tailored 
+                    to your needs.
+                </p>
+            </div>
+
+            <!-- Video Content (Right) -->
+            <div class="experience-media">
+                <div class="experience-video-wrapper floating-video">
+                    <video 
+                        class="experience-video" 
+                        autoplay 
+                        loop 
+                        muted 
+                        playsinline
+                        poster="/PathGen (1).png">
+                        <!-- Add your video source here -->
+                        <!-- <source src="/path-to-your-video.mp4" type="video/mp4"> -->
+                        <!-- Fallback to image if no video -->
+                    </video>
+                    <div class="video-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Enhanced AI Coaching Experience Section */
+        .enhanced-experience-section {
+            padding: 120px 48px;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .experience-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 32px;
+            padding: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #8B5CF6, #3B82F6);
+        }
+
+        .experience-text {
+            position: relative;
+            z-index: 10;
+        }
+
+        .experience-title {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 28px;
+            color: #FFFFFF;
+            letter-spacing: -0.02em;
+        }
+
+        .experience-highlight {
+            background: linear-gradient(135deg, #8B5CF6, #3B82F6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .experience-description {
+            font-size: 1.1rem;
+            color: #A0A0A0;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .experience-media {
+            position: relative;
+            z-index: 10;
+        }
+
+        .experience-video-wrapper {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Floating Animation */
+        .floating-video {
+            animation: floatVideo 6s ease-in-out infinite;
+        }
+
+        @keyframes floatVideo {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .experience-video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 24px;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .experience-video-wrapper:hover .video-overlay {
+            opacity: 1;
+        }
+
+        .experience-video-wrapper:hover {
+            animation-play-state: paused;
+            transform: translateY(-10px) scale(1.02);
+            transition: transform 0.4s ease;
+            box-shadow: 0 40px 100px rgba(139, 92, 246, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .enhanced-experience-section {
+                padding: 80px 24px;
+            }
+
+            .experience-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 40px 32px;
+            }
+
+            .experience-title {
+                font-size: 2.2rem;
+            }
+
+            .experience-description {
+                font-size: 1rem;
+                text-align: left;
+            }
+
+            .experience-text {
+                order: 2;
+            }
+
+            .experience-media {
+                order: 1;
+            }
+        }
+    </style>
+
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics-compat.js"></script>
