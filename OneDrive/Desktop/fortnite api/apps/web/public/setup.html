@@ -391,7 +391,10 @@
             if (code) {
                 try {
                     // Exchange code for access token via backend
-                    const response = await fetch('http://localhost:4000/api/discord/token', {
+                    const apiBase = window.location.hostname === 'localhost' 
+                        ? 'http://localhost:3000' 
+                        : '';
+                    const response = await fetch(`${apiBase}/api/discord/token`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -406,14 +409,16 @@
                         const discordUser = data.user || data;
                         
                         // Store Discord user data with all fields
-                        localStorage.setItem('discordUser', JSON.stringify({
+                        const discordUserData = {
                             id: discordUser.id,
                             username: discordUser.username,
                             discriminator: discordUser.discriminator,
                             email: discordUser.email,
                             avatar: discordUser.avatar,
                             verified: discordUser.verified
-                        }));
+                        };
+                        
+                        localStorage.setItem('discordUser', JSON.stringify(discordUserData));
                         localStorage.setItem('loginMethod', 'discord');
                         
                         console.log('✅ Discord OAuth successful:', {
@@ -421,6 +426,32 @@
                             email: discordUser.email,
                             id: discordUser.id
                         });
+                        
+                        // Save to Firestore users collection
+                        try {
+                            const db = firebase.firestore();
+                            const userDoc = {
+                                discordId: discordUser.id,
+                                discordUsername: discordUser.username,
+                                discordDiscriminator: discordUser.discriminator,
+                                email: discordUser.email,
+                                discordAvatar: discordUser.avatar,
+                                discordVerified: discordUser.verified,
+                                loginMethod: 'discord',
+                                lastLogin: firebase.firestore.FieldValue.serverTimestamp(),
+                                createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+                                subscription: {
+                                    status: 'free',
+                                    plan: 'free'
+                                }
+                            };
+                            
+                            // Use Discord ID as document ID
+                            await db.collection('users').doc(discordUser.id).set(userDoc, { merge: true });
+                            console.log('✅ User saved to Firestore:', discordUser.id);
+                        } catch (firestoreError) {
+                            console.error('❌ Error saving to Firestore:', firestoreError);
+                        }
                         
                         // Clean URL
                         window.history.replaceState({}, document.title, window.location.pathname);
@@ -503,6 +534,26 @@
                         username: userData.discordUsername,
                         avatar: userData.discordAvatar ? 'Set' : 'Not set'
                     });
+                    
+                    // Save complete user data to Firestore
+                    try {
+                        const db = firebase.firestore();
+                        const userDoc = {
+                            ...userData,
+                            setupComplete: true,
+                            lastUpdated: firebase.firestore.FieldValue.serverTimestamp(),
+                            subscription: {
+                                status: 'free',
+                                plan: 'free'
+                            }
+                        };
+                        
+                        // Use Discord ID as document ID
+                        await db.collection('users').doc(discordData.id).set(userDoc, { merge: true });
+                        console.log('✅ User profile saved to Firestore:', discordData.id);
+                    } catch (firestoreError) {
+                        console.error('❌ Error saving profile to Firestore:', firestoreError);
+                    }
                 } catch (e) {
                     console.error('❌ Error parsing Discord user data:', e);
                 }
