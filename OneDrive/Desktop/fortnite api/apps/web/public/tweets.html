@@ -875,18 +875,19 @@
             </div>
             <div class="status-badge">
                 <span>🔄</span>
-                <span>Poll: 5min | Refresh: 30s</span>
+                <span>Cache: 24h | Auto-refresh: 5min</span>
+            </div>
+            <div class="status-badge">
+                <span>📅</span>
+                <span>Since: Dec 1, 2024</span>
             </div>
         </div>
 
         <!-- Controls -->
         <div class="controls">
-            <button class="btn active" onclick="filterTweets('all')">📱 All Tweets</button>
-            <button class="btn" onclick="filterTweets('osirion_gg')">👤 Osirion</button>
-            <button class="btn" onclick="filterTweets('KinchAnalytics')">📊 Kinch Analytics</button>
-            <button class="btn" onclick="filterTweets('FNcompReport')">📰 FN Comp Report</button>
-            <button class="btn" onclick="loadTweets()">🔄 Refresh</button>
-            <button class="btn" onclick="window.open('/data/simpsons-season-schedule.txt', '_blank')">📅 Schedule</button>
+            <button class="btn active" id="btn-all" onclick="filterTweets('all')">📱 All Tweets</button>
+            <button class="btn" id="btn-osirion_gg" onclick="filterTweets('osirion_gg')">👤 Osirion</button>
+            <button class="btn" id="btn-refresh" onclick="forceRefresh()">🔄 Force Refresh</button>
             <button class="btn" onclick="window.location.href='/chat.html'">🤖 AI Chat</button>
         </div>
 
@@ -1085,7 +1086,7 @@
             });
         }
 
-        const API_BASE = 'http://localhost:4000';
+        const API_BASE = '/api'; // Use Next.js API routes
         let currentFilter = 'all';
         let autoRefreshInterval;
 
@@ -1094,31 +1095,35 @@
             const container = document.getElementById('tweetsContainer');
             
             try {
-                const url = currentFilter === 'all' 
-                    ? `${API_BASE}/api/tweets?limit=50`
-                    : `${API_BASE}/api/tweets/${currentFilter}?limit=50`;
-                
-                const response = await fetch(url);
+                const response = await fetch(`${API_BASE}/tweets`);
                 if (!response.ok) throw new Error('Failed to fetch tweets');
                 
                 const data = await response.json();
+                
+                // Transform Apify response to match expected format
+                const transformedData = {
+                    success: data.success,
+                    total: data.count || 0,
+                    streamConnected: data.success,
+                    data: data.tweets || []
+                };
                 
                 // Update connection status
                 const connectionStatusEl = document.getElementById('connectionStatus');
                 const statusDot = document.querySelector('.status-dot');
                 
-                if (data.streamConnected && data.total > 0) {
-                    connectionStatusEl.textContent = 'Connected';
+                if (transformedData.streamConnected && transformedData.total > 0) {
+                    connectionStatusEl.textContent = data.cached ? 'Connected (Cached)' : 'Connected';
                     if (statusDot) {
                         statusDot.style.background = '#10B981'; // Green
                     }
-                } else if (data.total > 0) {
+                } else if (transformedData.total > 0) {
                     connectionStatusEl.textContent = 'Connected';
                     if (statusDot) {
                         statusDot.style.background = '#10B981'; // Green - has data
                     }
                 } else {
-                    connectionStatusEl.textContent = 'Disconnected';
+                    connectionStatusEl.textContent = 'Fetching...';
                     if (statusDot) {
                         statusDot.style.background = '#F59E0B'; // Orange/Amber
                     }
@@ -1126,12 +1131,21 @@
                 
                 // Update total tweets
                 document.getElementById('totalTweets').textContent = 
-                    `${data.total} tweet${data.total !== 1 ? 's' : ''}`;
+                    `${transformedData.total} tweet${transformedData.total !== 1 ? 's' : ''}`;
                 
-                // Display tweets
-                if (data.data && data.data.length > 0) {
-                    displayTweets(data.data);
-                    await loadStats();
+                // Display tweets (filter if needed)
+                let tweetsToDisplay = transformedData.data || [];
+                
+                // Apply filter if not 'all'
+                if (currentFilter !== 'all') {
+                    tweetsToDisplay = tweetsToDisplay.filter(tweet => 
+                        tweet.author.userName.toLowerCase() === currentFilter.toLowerCase()
+                    );
+                }
+                
+                if (tweetsToDisplay.length > 0) {
+                    displayTweets(tweetsToDisplay);
+                    await loadStats(transformedData.data);
                     setTimeout(initScrollAnimations, 100);
                 } else {
                     container.innerHTML = `
@@ -1139,7 +1153,9 @@
                             <div class="icon">📭</div>
                             <div>No tweets found</div>
                             <div style="margin-top: 10px; font-size: 0.9rem;">
-                                Waiting for ${currentFilter === 'all' ? 'tracked accounts' : '@' + currentFilter} to tweet...
+                                ${currentFilter === 'all' 
+                                    ? 'Waiting for @osirion_gg to tweet (Dec 1+)...' 
+                                    : `No tweets from @${currentFilter} (Dec 1+)`}
                             </div>
                         </div>
                     `;
@@ -1183,16 +1199,22 @@
             const container = document.getElementById('tweetsContainer');
             
             container.innerHTML = tweets.map(tweet => {
-                const isLive = tweet.isLive || false;
-                const time = new Date(tweet.created_at).toLocaleString();
-                const timeAgo = getTimeAgo(tweet.created_at);
-                const initial = tweet.username[0].toUpperCase();
-                const logoUrl = getLogoForUsername(tweet.username);
+                // Apify format: tweet.author.userName, tweet.createdAt, tweet.text
+                const username = tweet.author?.userName || 'unknown';
+                const name = tweet.author?.name || username;
+                const profileImageUrl = tweet.author?.profileImageUrl;
+                const isLive = isRecentTweet(tweet.createdAt); // Tweet is "live" if less than 5 min old
+                const time = new Date(tweet.createdAt).toLocaleString();
+                const timeAgo = getTimeAgo(tweet.createdAt);
+                const initial = username[0].toUpperCase();
+                const logoUrl = getLogoForUsername(username);
                 
-                // Create avatar HTML - use logo if available, otherwise use initial
+                // Create avatar HTML - use profile image, logo, or initial
                 let avatarHtml = '';
-                if (logoUrl) {
-                    avatarHtml = `<img src="${logoUrl}" alt="${tweet.name || tweet.username}" onerror="this.style.display='none'; this.parentElement.textContent='${initial}'; this.parentElement.style.background='linear-gradient(135deg, #8B5CF6, #3B82F6)';" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;">`;
+                if (profileImageUrl) {
+                    avatarHtml = `<img src="${profileImageUrl}" alt="${name}" onerror="this.style.display='none'; this.parentElement.textContent='${initial}'; this.parentElement.style.background='linear-gradient(135deg, #8B5CF6, #3B82F6)';" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;">`;
+                } else if (logoUrl) {
+                    avatarHtml = `<img src="${logoUrl}" alt="${name}" onerror="this.style.display='none'; this.parentElement.textContent='${initial}'; this.parentElement.style.background='linear-gradient(135deg, #8B5CF6, #3B82F6)';" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;">`;
                 } else {
                     avatarHtml = initial;
                 }
@@ -1202,8 +1224,8 @@
                         <div class="tweet-header">
                             <div class="tweet-avatar">${avatarHtml}</div>
                             <div class="tweet-user">
-                                <div class="tweet-name">${tweet.name || tweet.username}</div>
-                                <div class="tweet-username">@${tweet.username}</div>
+                                <div class="tweet-name">${name}</div>
+                                <div class="tweet-username">@${username}</div>
                             </div>
                             ${isLive ? '<span class="tweet-badge">🔴 LIVE</span>' : ''}
                         </div>
@@ -1213,31 +1235,51 @@
                                 <span>🕐</span>
                                 <span>${timeAgo}</span>
                             </div>
-                            <div>${time}</div>
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                ${tweet.likeCount ? `<span>❤️ ${formatCount(tweet.likeCount)}</span>` : ''}
+                                ${tweet.retweetCount ? `<span>🔁 ${formatCount(tweet.retweetCount)}</span>` : ''}
+                                ${tweet.url ? `<a href="${tweet.url}" target="_blank" style="color: #8B5CF6; text-decoration: none;">↗</a>` : ''}
+                            </div>
                         </div>
                     </div>
                 `;
             }).join('');
         }
+        
+        // Check if tweet is recent (less than 5 minutes old)
+        function isRecentTweet(createdAt) {
+            const tweetTime = new Date(createdAt);
+            const now = new Date();
+            const diffMinutes = (now - tweetTime) / 1000 / 60;
+            return diffMinutes < 5;
+        }
+        
+        // Format count (1.2K, 10K, etc.)
+        function formatCount(count) {
+            if (count >= 1000000) return (count / 1000000).toFixed(1) + 'M';
+            if (count >= 1000) return (count / 1000).toFixed(1) + 'K';
+            return count;
+        }
 
         // Load stats
-        async function loadStats() {
+        async function loadStats(tweets = []) {
             try {
-                const response = await fetch(`${API_BASE}/api/tweet-stats`);
-                if (!response.ok) return;
+                // Calculate stats from tweets data
+                const total = tweets.length;
+                const liveTweets = tweets.filter(t => isRecentTweet(t.createdAt)).length;
                 
-                const stats = await response.json();
+                // Count by user
+                const byUser = {};
+                tweets.forEach(tweet => {
+                    const username = tweet.author?.userName || 'unknown';
+                    byUser[username] = (byUser[username] || 0) + 1;
+                });
                 
-                document.getElementById('statTotal').textContent = stats.total || 0;
-                document.getElementById('statOsirion').textContent = stats.byUser?.osirion_gg || 0;
-                document.getElementById('statKinch').textContent = stats.byUser?.KinchAnalytics || 0;
-                document.getElementById('statFNcomp').textContent = stats.byUser?.FNcompReport || 0;
-                
-                // Calculate live tweets
-                const tweetsResponse = await fetch(`${API_BASE}/api/tweets?limit=100`);
-                const tweetsData = await tweetsResponse.json();
-                const liveTweets = tweetsData.data?.filter(t => t.isLive).length || 0;
+                document.getElementById('statTotal').textContent = total;
                 document.getElementById('statLive').textContent = liveTweets;
+                document.getElementById('statOsirion').textContent = byUser['osirion_gg'] || 0;
+                document.getElementById('statKinch').textContent = byUser['KinchAnalytics'] || 0;
+                document.getElementById('statFNcomp').textContent = byUser['FNcompReport'] || 0;
                 
                 document.getElementById('statsGrid').style.display = 'grid';
             } catch (error) {
@@ -1253,9 +1295,45 @@
             document.querySelectorAll('.btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            event.target.classList.add('active');
+            
+            const btnId = `btn-${filter}`;
+            const activeBtn = document.getElementById(btnId);
+            if (activeBtn) {
+                activeBtn.classList.add('active');
+            }
             
             loadTweets();
+        }
+        
+        // Force refresh (bypass cache)
+        async function forceRefresh() {
+            const container = document.getElementById('tweetsContainer');
+            container.innerHTML = '<div class="loading">Fetching fresh tweets from Apify...</div>';
+            
+            try {
+                const response = await fetch(`${API_BASE}/tweets?refresh=true`);
+                if (!response.ok) throw new Error('Failed to fetch tweets');
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    // Reload tweets with fresh data
+                    await loadTweets();
+                } else {
+                    throw new Error(data.message || 'Failed to refresh');
+                }
+            } catch (error) {
+                console.error('Error forcing refresh:', error);
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="icon">⚠️</div>
+                        <div>Error refreshing tweets</div>
+                        <div style="margin-top: 10px; font-size: 0.9rem; color: #EF4444;">
+                            ${error.message}
+                        </div>
+                    </div>
+                `;
+            }
         }
 
         // Utility functions
@@ -1274,11 +1352,11 @@
             return div.innerHTML;
         }
 
-        // Auto-refresh every 30 seconds
+        // Auto-refresh every 5 minutes (tweets are cached for 24h on backend)
         function startAutoRefresh() {
             autoRefreshInterval = setInterval(() => {
                 loadTweets();
-            }, 30000);
+            }, 300000); // 5 minutes
         }
 
         // Check for logged in user and show profile
