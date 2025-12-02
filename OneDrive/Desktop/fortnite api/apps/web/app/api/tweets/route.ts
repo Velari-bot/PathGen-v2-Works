@@ -43,6 +43,9 @@ async function fetchTweetsFromApify(): Promise<ApifyTweet[]> {
   }
 
   try {
+    // Calculate date filter (December 1, 2024 onwards)
+    const filterDate = new Date("2024-12-01T00:00:00Z");
+    
     // Run Apify actor to scrape tweets
     const runUrl = `https://api.apify.com/v2/acts/${APIFY_ACTOR_ID}/runs?token=${APIFY_API_TOKEN}`;
     
@@ -53,8 +56,9 @@ async function fetchTweetsFromApify(): Promise<ApifyTweet[]> {
       },
       body: JSON.stringify({
         startUrls: [`https://twitter.com/${TWITTER_USERNAME}`],
-        maxItems: 50,
+        maxItems: 100, // Fetch more to ensure we get enough after filtering
         sort: "Latest",
+        searchMode: "live", // Get only recent tweets
       }),
     });
 
@@ -96,25 +100,30 @@ async function fetchTweetsFromApify(): Promise<ApifyTweet[]> {
 
     const tweets = await datasetResponse.json();
 
-    // Deduplicate by tweet ID
+    // Filter tweets from December 1st onwards and deduplicate
     const uniqueTweets: { [key: string]: ApifyTweet } = {};
     tweets.forEach((tweet: any) => {
       if (tweet.id) {
-        uniqueTweets[tweet.id] = {
-          id: tweet.id,
-          text: tweet.text || tweet.full_text || "",
-          author: {
-            userName: tweet.author?.userName || TWITTER_USERNAME,
-            name: tweet.author?.name || "",
-            profileImageUrl: tweet.author?.profileImageUrl,
-          },
-          createdAt: tweet.createdAt || new Date().toISOString(),
-          likeCount: tweet.likeCount || 0,
-          retweetCount: tweet.retweetCount || 0,
-          replyCount: tweet.replyCount || 0,
-          url: tweet.url || `https://twitter.com/${TWITTER_USERNAME}/status/${tweet.id}`,
-          media: tweet.media || [],
-        };
+        const tweetDate = new Date(tweet.createdAt);
+        
+        // Only include tweets from Dec 1, 2024 onwards
+        if (tweetDate >= filterDate) {
+          uniqueTweets[tweet.id] = {
+            id: tweet.id,
+            text: tweet.text || tweet.full_text || "",
+            author: {
+              userName: tweet.author?.userName || TWITTER_USERNAME,
+              name: tweet.author?.name || "",
+              profileImageUrl: tweet.author?.profileImageUrl,
+            },
+            createdAt: tweet.createdAt || new Date().toISOString(),
+            likeCount: tweet.likeCount || 0,
+            retweetCount: tweet.retweetCount || 0,
+            replyCount: tweet.replyCount || 0,
+            url: tweet.url || `https://twitter.com/${TWITTER_USERNAME}/status/${tweet.id}`,
+            media: tweet.media || [],
+          };
+        }
       }
     });
 
