@@ -1361,27 +1361,56 @@
                     
                     const initial = (user.discordUsername || user.email || 'U')[0].toUpperCase();
                     const plan = user.subscription?.plan || 'free';
-                    const isActive = user.lastLogin && (new Date() - user.lastLogin.toDate()) < 86400000; // 24h
+                    
+                    // Handle different date formats
+                    let lastLoginDate = null;
+                    if (user.lastLogin) {
+                        if (typeof user.lastLogin.toDate === 'function') {
+                            lastLoginDate = user.lastLogin.toDate();
+                        } else if (user.lastLogin instanceof Date) {
+                            lastLoginDate = user.lastLogin;
+                        } else if (typeof user.lastLogin === 'string') {
+                            lastLoginDate = new Date(user.lastLogin);
+                        }
+                    }
+                    
+                    const isActive = lastLoginDate && (new Date() - lastLoginDate) < 86400000; // 24h
+                    
+                    let createdDate = 'N/A';
+                    if (user.createdAt) {
+                        if (typeof user.createdAt.toDate === 'function') {
+                            createdDate = new Date(user.createdAt.toDate()).toLocaleDateString();
+                        } else if (user.createdAt instanceof Date) {
+                            createdDate = user.createdAt.toLocaleDateString();
+                        } else if (typeof user.createdAt === 'string') {
+                            createdDate = new Date(user.createdAt).toLocaleDateString();
+                        }
+                    }
+                    
+                    const isAdmin = user.isAdmin || user.role === 'admin';
                     
                     tr.innerHTML = `
                         <td>
                             <div style="display: flex; align-items: center; gap: 12px;">
                                 <div class="user-avatar">${initial}</div>
                                 <div>
-                                    <div style="font-weight: 600; color: #fff;">${user.discordUsername || user.firstName || 'Unknown'}</div>
-                                    <div style="font-size: 0.85rem; color: #6B7280;">${doc.id}</div>
+                                    <div style="font-weight: 600; color: #fff;">
+                                        ${user.discordUsername || user.firstName || 'Unknown'}
+                                        ${isAdmin ? '<span class="badge badge-admin" style="margin-left: 8px;">ADMIN</span>' : ''}
+                                    </div>
+                                    <div style="font-size: 0.85rem; color: #6B7280;">${doc.id.substring(0, 12)}...</div>
                                 </div>
                             </div>
                         </td>
                         <td>${user.email || 'N/A'}</td>
                         <td><span class="badge badge-${plan}">${plan.toUpperCase()}</span></td>
                         <td><span class="badge badge-${isActive ? 'active' : 'inactive'}">${isActive ? 'Active' : 'Inactive'}</span></td>
-                        <td>${user.createdAt ? new Date(user.createdAt.toDate()).toLocaleDateString() : 'N/A'}</td>
-                        <td>${user.lastLogin ? new Date(user.lastLogin.toDate()).toLocaleString() : 'Never'}</td>
+                        <td>${createdDate}</td>
+                        <td>${lastLoginDate ? new Date(lastLoginDate).toLocaleString() : 'Never'}</td>
                         <td>
                             <button class="action-btn" onclick="viewUser('${doc.id}')">👁️ View</button>
                             <button class="action-btn" onclick="editUser('${doc.id}')">✏️ Edit</button>
-                            <button class="action-btn" onclick="banUser('${doc.id}')">🚫 Ban</button>
+                            ${!isAdmin ? `<button class="action-btn" onclick="banUser('${doc.id}')">🚫 Ban</button>` : ''}
                         </td>
                     `;
                     
@@ -1426,16 +1455,35 @@
                     if (sub.status === 'canceled') churnedCount++;
                     if (sub.plan === 'pro' && sub.status === 'active') mrr += 19.99;
                     
+                    // Handle date formats
+                    let startDate = 'N/A';
+                    if (sub.startDate) {
+                        if (typeof sub.startDate.toDate === 'function') {
+                            startDate = new Date(sub.startDate.toDate()).toLocaleDateString();
+                        } else {
+                            startDate = new Date(sub.startDate).toLocaleDateString();
+                        }
+                    }
+                    
+                    let endDate = 'N/A';
+                    if (sub.currentPeriodEnd) {
+                        if (typeof sub.currentPeriodEnd.toDate === 'function') {
+                            endDate = new Date(sub.currentPeriodEnd.toDate()).toLocaleDateString();
+                        } else {
+                            endDate = new Date(sub.currentPeriodEnd).toLocaleDateString();
+                        }
+                    }
+                    
                     const tr = document.createElement('tr');
                     tr.innerHTML = `
-                        <td>${user.discordUsername || user.email || doc.id}</td>
+                        <td>${user.discordUsername || user.email || doc.id.substring(0, 12) + '...'}</td>
                         <td><span class="badge badge-${sub.plan || 'free'}">${(sub.plan || 'free').toUpperCase()}</span></td>
-                        <td><span class="badge badge-${sub.status === 'active' ? 'active' : 'inactive'}">${sub.status || 'N/A'}</span></td>
-                        <td>${sub.startDate ? new Date(sub.startDate.toDate()).toLocaleDateString() : 'N/A'}</td>
-                        <td>${sub.currentPeriodEnd ? new Date(sub.currentPeriodEnd.toDate()).toLocaleDateString() : 'N/A'}</td>
+                        <td><span class="badge badge-${sub.status === 'active' ? 'active' : 'inactive'}">${sub.status || 'free'}</span></td>
+                        <td>${startDate}</td>
+                        <td>${endDate}</td>
                         <td>
                             <button class="action-btn" onclick="viewSubscription('${doc.id}')">👁️ View</button>
-                            <button class="action-btn" onclick="cancelSubscription('${doc.id}')">❌ Cancel</button>
+                            ${sub.status === 'active' ? `<button class="action-btn" onclick="cancelSubscription('${doc.id}')">❌ Cancel</button>` : ''}
                         </td>
                     `;
                     tbody.appendChild(tr);
