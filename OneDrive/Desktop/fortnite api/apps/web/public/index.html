@@ -1238,7 +1238,23 @@
     <!-- Enhanced AI Coaching Experience Section -->
     <section class="enhanced-experience-section">
         <div class="experience-container">
-            <!-- Text Content (Left) -->
+            <!-- Video Content (Left) -->
+            <div class="experience-media">
+                <div class="experience-video-wrapper floating-video">
+                    <video 
+                        class="experience-video" 
+                        autoplay 
+                        loop 
+                        muted 
+                        playsinline
+                        poster="/PathGen (1).png">
+                        <source src="/PathGen ad.mp4" type="video/mp4">
+                        <!-- Fallback to image if video doesn't load -->
+                    </video>
+                </div>
+            </div>
+
+            <!-- Text Content (Right) -->
             <div class="experience-text">
                 <h2 class="experience-title">Enhanced <span class="experience-highlight">AI Coaching</span> Experience</h2>
                 <p class="experience-description">
@@ -1250,24 +1266,6 @@
                     tracking to meta updates — PathGen delivers comprehensive coaching around the clock, completely tailored 
                     to your needs.
                 </p>
-            </div>
-
-            <!-- Video Content (Right) -->
-            <div class="experience-media">
-                <div class="experience-video-wrapper floating-video">
-                    <video 
-                        class="experience-video" 
-                        autoplay 
-                        loop 
-                        muted 
-                        playsinline
-                        poster="/PathGen (1).png">
-                        <!-- Add your video source here -->
-                        <!-- <source src="/path-to-your-video.mp4" type="video/mp4"> -->
-                        <!-- Fallback to image if no video -->
-                    </video>
-                    <div class="video-overlay"></div>
-                </div>
             </div>
         </div>
     </section>
@@ -1283,15 +1281,16 @@
 
         .experience-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
             align-items: center;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 32px;
-            padding: 60px;
+            background: #1A1A1A;
+            border: none;
+            border-radius: 20px;
+            padding: 50px;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
         }
 
         .experience-container::before {
@@ -1299,9 +1298,10 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 4px;
+            width: 6px;
             height: 100%;
-            background: linear-gradient(180deg, #8B5CF6, #3B82F6);
+            background: linear-gradient(180deg, #8B5CF6 0%, #6366F1 50%, #3B82F6 100%);
+            border-radius: 0 4px 4px 0;
         }
 
         .experience-text {
@@ -1326,10 +1326,10 @@
         }
 
         .experience-description {
-            font-size: 1.1rem;
-            color: #A0A0A0;
-            line-height: 1.8;
-            text-align: justify;
+            font-size: 1.05rem;
+            color: #D1D5DB;
+            line-height: 1.9;
+            text-align: left;
         }
 
         .experience-media {
@@ -1339,10 +1339,10 @@
 
         .experience-video-wrapper {
             position: relative;
-            border-radius: 24px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            border: none;
         }
 
         /* Floating Animation */
@@ -1363,30 +1363,7 @@
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 24px;
-        }
-
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .experience-video-wrapper:hover .video-overlay {
-            opacity: 1;
-        }
-
-        .experience-video-wrapper:hover {
-            animation-play-state: paused;
-            transform: translateY(-10px) scale(1.02);
-            transition: transform 0.4s ease;
-            box-shadow: 0 40px 100px rgba(139, 92, 246, 0.3);
+            border-radius: 16px;
         }
 
         /* Responsive */
