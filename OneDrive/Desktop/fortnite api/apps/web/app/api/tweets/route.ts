@@ -32,15 +32,18 @@ async function fetchTweetsFromApify(): Promise<ApifyTweet[]> {
   const TWITTER_USERNAME = process.env.TWITTER_USERNAME || "osirion_gg";
 
   if (!APIFY_API_TOKEN) {
+    console.error("APIFY_API_TOKEN is not configured");
     throw new Error("APIFY_API_TOKEN is not configured");
   }
 
   // Check cache first
   const now = Date.now();
   if (cachedTweets && (now - lastFetchTime) < CACHE_DURATION) {
-    console.log("Returning cached tweets");
+    console.log("✅ Returning cached tweets:", cachedTweets.length);
     return cachedTweets;
   }
+  
+  console.log("🔄 Fetching fresh tweets from Apify...");
 
   try {
     // Calculate date filter (December 1, 2024 onwards)
@@ -63,10 +66,19 @@ async function fetchTweetsFromApify(): Promise<ApifyTweet[]> {
     });
 
     if (!runResponse.ok) {
+      const errorText = await runResponse.text();
+      console.error("❌ Failed to start Apify run:", runResponse.status, errorText);
       throw new Error(`Failed to start Apify run: ${runResponse.status}`);
     }
 
     const runData = await runResponse.json();
+    console.log("✅ Apify run started:", runData.data?.id);
+    
+    if (!runData.data || !runData.data.id) {
+      console.error("❌ No run ID in response:", runData);
+      throw new Error("Invalid Apify response - no run ID");
+    }
+    
     const runId = runData.data.id;
 
     // Wait for the run to complete (with timeout)
@@ -134,16 +146,19 @@ async function fetchTweetsFromApify(): Promise<ApifyTweet[]> {
     lastFetchTime = now;
 
     return deduplicatedTweets;
-  } catch (error) {
-    console.error("Error fetching tweets from Apify:", error);
+  } catch (error: any) {
+    console.error("❌ Error fetching tweets from Apify:", error.message);
+    console.error("Full error:", error);
     
     // Return cached tweets if available, even if stale
     if (cachedTweets) {
-      console.log("Returning stale cached tweets due to error");
+      console.log("⚠️ Returning stale cached tweets due to error");
       return cachedTweets;
     }
     
-    throw error;
+    // Return empty array instead of throwing to prevent 500 errors
+    console.log("⚠️ No cached tweets available, returning empty array");
+    return [];
   }
 }
 
@@ -152,6 +167,8 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url);
     const forceRefresh = searchParams.get("refresh") === "true";
 
+    console.log("📡 Tweets API called, forceRefresh:", forceRefresh);
+
     // Force refresh if requested
     if (forceRefresh) {
       cachedTweets = null;
@@ -159,6 +176,8 @@ export async function GET(request: NextRequest) {
     }
 
     const tweets = await fetchTweetsFromApify();
+
+    console.log("✅ Returning tweets:", tweets.length);
 
     return NextResponse.json({
       success: true,
@@ -171,15 +190,23 @@ export async function GET(request: NextRequest) {
       },
     });
   } catch (error: any) {
-    console.error("Error in tweets API route:", error);
-    return NextResponse.json(
-      {
-        success: false,
-        error: "Failed to fetch tweets",
-        message: error.message,
+    console.error("❌ Error in tweets API route:", error);
+    console.error("Stack:", error.stack);
+    
+    // Return empty tweets instead of error to prevent frontend crash
+    return NextResponse.json({
+      success: false,
+      tweets: [],
+      cached: false,
+      count: 0,
+      error: "Failed to fetch tweets",
+      message: error.message,
+    }, {
+      status: 200, // Return 200 to prevent frontend error
+      headers: {
+        "Cache-Control": "public, s-maxage=60, stale-while-revalidate=30",
       },
-      { status: 500 }
-    );
+    });
   }
 }
 
