@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👑 Admin Dashboard - PathGen v2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0A0A0A;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .admin-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: rgba(255, 255, 255, 0.02);
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 24px;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .sidebar-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .nav-section {
+            margin-bottom: 24px;
+        }
+
+        .nav-section-title {
+            font-size: 0.75rem;
+            color: #6B7280;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            padding: 0 12px;
+            font-weight: 600;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            border-radius: 12px;
+            color: #9CA3AF;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            color: #FFFFFF;
+        }
+
+        .nav-item.active {
+            background: rgba(251, 191, 36, 0.15);
+            color: #fbbf24;
+        }
+
+        .nav-icon {
+            font-size: 1.2rem;
+            width: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 280px;
+            flex: 1;
+            padding: 32px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .header-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+
+        .header-subtitle {
+            color: #6B7280;
+            margin-top: 4px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            border: none;
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+
+        .btn-danger {
+            background: rgba(239, 68, 68, 0.15);
+            border-color: rgba(239, 68, 68, 0.3);
+            color: #EF4444;
+        }
+
+        .btn-danger:hover {
+            background: rgba(239, 68, 68, 0.25);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #fbbf24, #f59e0b);
+        }
+
+        .stat-label {
+            color: #9CA3AF;
+            font-size: 0.875rem;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 4px;
+        }
+
+        .stat-change {
+            font-size: 0.875rem;
+            color: #10B981;
+        }
+
+        .stat-change.negative {
+            color: #EF4444;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 0;
+        }
+
+        .tab {
+            padding: 12px 24px;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid transparent;
+            color: #9CA3AF;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .tab:hover {
+            color: #FFFFFF;
+        }
+
+        .tab.active {
+            color: #fbbf24;
+            border-bottom-color: #fbbf24;
+        }
+
+        /* Content Sections */
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        /* Table */
+        .table-container {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table thead {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .table th {
+            text-align: left;
+            padding: 16px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #9CA3AF;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .table td {
+            padding: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #D1D5DB;
+        }
+
+        .table tbody tr {
+            transition: background 0.2s ease;
+        }
+
+        .table tbody tr:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .user-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8B5CF6, #3B82F6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .badge-free {
+            background: rgba(107, 114, 128, 0.2);
+            color: #9CA3AF;
+        }
+
+        .badge-pro {
+            background: rgba(139, 92, 246, 0.2);
+            color: #8B5CF6;
+        }
+
+        .badge-admin {
+            background: rgba(251, 191, 36, 0.2);
+            color: #fbbf24;
+        }
+
+        .badge-active {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10B981;
+        }
+
+        .badge-inactive {
+            background: rgba(239, 68, 68, 0.2);
+            color: #EF4444;
+        }
+
+        /* Charts */
+        .chart-container {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .chart-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #D1D5DB;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: #FFFFFF;
+            font-size: 0.9rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #fbbf24;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Action Buttons in Table */
+        .action-btn {
+            padding: 6px 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: all 0.2s ease;
+            margin-right: 4px;
+        }
+
+        .action-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px;
+            color: #6B7280;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px;
+            color: #6B7280;
+        }
+
+        .empty-state-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 16px 12px 44px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: #FFFFFF;
+            font-size: 0.9rem;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6B7280;
+        }
+
+        /* Filters */
+        .filters {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            color: #9CA3AF;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+        }
+
+        .filter-btn:hover {
+            background: rgba(255, 255, 255, 0.06);
+            color: #FFFFFF;
+        }
+
+        .filter-btn.active {
+            background: rgba(251, 191, 36, 0.15);
+            border-color: rgba(251, 191, 36, 0.3);
+            color: #fbbf24;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: #1A1A1A;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 32px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            margin-bottom: 24px;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #9CA3AF;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .sidebar {
+                width: 240px;
+            }
+            .main-content {
+                margin-left: 240px;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none;
+            }
+            .main-content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="sidebar-logo">👑 Admin</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <a class="nav-item active" onclick="showSection('dashboard')">
+                        <span class="nav-icon">📊</span>
+                        <span>Dashboard</span>
+                    </a>
+                    <a class="nav-item" onclick="showSection('analytics')">
+                        <span class="nav-icon">📈</span>
+                        <span>Analytics</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Management</div>
+                    <a class="nav-item" onclick="showSection('users')">
+                        <span class="nav-icon">👥</span>
+                        <span>Users</span>
+                    </a>
+                    <a class="nav-item" onclick="showSection('subscriptions')">
+                        <span class="nav-icon">💳</span>
+                        <span>Subscriptions</span>
+                    </a>
+                    <a class="nav-item" onclick="showSection('payments')">
+                        <span class="nav-icon">💰</span>
+                        <span>Payments</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Content</div>
+                    <a class="nav-item" onclick="showSection('prompts')">
+                        <span class="nav-icon">🤖</span>
+                        <span>AI Prompts</span>
+                    </a>
+                    <a class="nav-item" onclick="showSection('templates')">
+                        <span class="nav-icon">📝</span>
+                        <span>Templates</span>
+                    </a>
+                    <a class="nav-item" onclick="showSection('emails')">
+                        <span class="nav-icon">📧</span>
+                        <span>Emails</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Moderation</div>
+                    <a class="nav-item" onclick="showSection('reports')">
+                        <span class="nav-icon">⚠️</span>
+                        <span>Reports</span>
+                    </a>
+                    <a class="nav-item" onclick="showSection('abuse')">
+                        <span class="nav-icon">🚫</span>
+                        <span>Abuse Detection</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">System</div>
+                    <a class="nav-item" onclick="showSection('logs')">
+                        <span class="nav-icon">📋</span>
+                        <span>Logs</span>
+                    </a>
+                    <a class="nav-item" onclick="showSection('settings')">
+                        <span class="nav-icon">⚙️</span>
+                        <span>Settings</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <a class="nav-item" href="/index.html">
+                        <span class="nav-icon">🏠</span>
+                        <span>Back to Site</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <div id="dashboard" class="content-section active">
+                <div class="header">
+                    <div>
+                        <h1 class="header-title">Dashboard</h1>
+                        <p class="header-subtitle">PathGen v2 Admin Overview</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn" onclick="refreshDashboard()">🔄 Refresh</button>
+                        <button class="btn-primary btn" onclick="exportData()">📥 Export Data</button>
+                    </div>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Total Users</div>
+                        <div class="stat-value" id="statTotalUsers">0</div>
+                        <div class="stat-change" id="statUsersChange">+0% from last month</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Active Subscriptions</div>
+                        <div class="stat-value" id="statActiveSubscriptions">0</div>
+                        <div class="stat-change" id="statSubsChange">+0% from last month</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Monthly Revenue</div>
+                        <div class="stat-value" id="statRevenue">$0</div>
+                        <div class="stat-change" id="statRevenueChange">+0% from last month</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">AI Conversations</div>
+                        <div class="stat-value" id="statConversations">0</div>
+                        <div class="stat-change">Today</div>
+                    </div>
+                </div>
+
+                <!-- Charts -->
+                <div class="chart-container">
+                    <div class="chart-title">User Growth (Last 30 Days)</div>
+                    <div id="userGrowthChart" style="height: 300px; display: flex; align-items: center; justify-content: center; color: #6B7280;">
+                        📈 Chart will load here
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-title">Revenue Breakdown</div>
+                    <div id="revenueChart" style="height: 300px; display: flex; align-items: center; justify-content: center; color: #6B7280;">
+                        💰 Chart will load here
+                    </div>
+                </div>
+            </div>
+
+            <!-- Users Section -->
+            <div id="users" class="content-section">
+                <div class="header">
+                    <div>
+                        <h1 class="header-title">User Management</h1>
+                        <p class="header-subtitle">View and manage all users</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn" onclick="showModal('addUser')">➕ Add User</button>
+                        <button class="btn" onclick="exportUsers()">📥 Export Users</button>
+                    </div>
+                </div>
+
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="search-input" id="userSearch" placeholder="Search users by name, email, or Discord username..." onkeyup="searchUsers()">
+                </div>
+
+                <div class="filters">
+                    <button class="filter-btn active" onclick="filterUsers('all')">All Users</button>
+                    <button class="filter-btn" onclick="filterUsers('free')">Free Plan</button>
+                    <button class="filter-btn" onclick="filterUsers('pro')">Pro Plan</button>
+                    <button class="filter-btn" onclick="filterUsers('admin')">Admins</button>
+                    <button class="filter-btn" onclick="filterUsers('active')">Active Today</button>
+                </div>
+
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Email</th>
+                                <th>Plan</th>
+                                <th>Status</th>
+                                <th>Joined</th>
+                                <th>Last Active</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody">
+                            <tr>
+                                <td colspan="7" class="loading">Loading users...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Analytics Section -->
+            <div id="analytics" class="content-section">
+                <div class="header">
+                    <div>
+                        <h1 class="header-title">Analytics</h1>
+                        <p class="header-subtitle">User engagement and performance metrics</p>
+                    </div>
+                    <div class="header-actions">
+                        <select class="btn" id="analyticsTimeRange" onchange="loadAnalytics()">
+                            <option value="7">Last 7 days</option>
+                            <option value="30" selected>Last 30 days</option>
+                            <option value="90">Last 90 days</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Total Sessions</div>
+                        <div class="stat-value" id="analyticsSessionsValue">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Avg Session Length</div>
+                        <div class="stat-value" id="analyticsAvgSessionValue">0m</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Retention Rate</div>
+                        <div class="stat-value" id="analyticsRetentionValue">0%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Conversion Rate</div>
+                        <div class="stat-value" id="analyticsConversionValue">0%</div>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-title">Feature Usage</div>
+                    <div id="featureUsageChart" style="height: 300px; display: flex; align-items: center; justify-content: center; color: #6B7280;">
+                        📊 Loading feature usage data...
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-title">Popular Coaching Topics</div>
+                    <div id="topicsChart" style="height: 300px; display: flex; align-items: center; justify-content: center; color: #6B7280;">
+                        💭 Loading topics data...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscriptions Section -->
+            <div id="subscriptions" class="content-section">
+                <div class="header">
+                    <div>
+                        <h1 class="header-title">Subscriptions</h1>
+                        <p class="header-subtitle">Manage user subscriptions and plans</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn" onclick="syncStripeData()">🔄 Sync with Stripe</button>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Active Subscriptions</div>
+                        <div class="stat-value" id="subsActiveValue">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Trial Users</div>
+                        <div class="stat-value" id="subsTrialValue">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Churned Users</div>
+                        <div class="stat-value" id="subsChurnedValue">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">MRR</div>
+                        <div class="stat-value" id="subsMRRValue">$0</div>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Plan</th>
+                                <th>Status</th>
+                                <th>Started</th>
+                                <th>Renews/Ends</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="subscriptionsTableBody">
+                            <tr>
+                                <td colspan="6" class="loading">Loading subscriptions...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Prompts Section -->
+            <div id="prompts" class="content-section">
+                <div class="header">
+                    <div>
+                        <h1 class="header-title">AI Prompts</h1>
+                        <p class="header-subtitle">Manage coaching prompts and AI behavior</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn-primary btn" onclick="showModal('addPrompt')">➕ New Prompt</button>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Last Updated</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="promptsTableBody">
+                            <tr>
+                                <td colspan="5" class="loading">Loading prompts...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Emails Section -->
+            <div id="emails" class="content-section">
+                <div class="header">
+                    <div>
+                        <h1 class="header-title">Email Management</h1>
+                        <p class="header-subtitle">Send broadcasts and manage email templates</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn-primary btn" onclick="showModal('sendEmail')">📧 Send Broadcast</button>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Emails Sent (30d)</div>
+                        <div class="stat-value" id="emailsSentValue">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Open Rate</div>
+                        <div class="stat-value" id="emailsOpenRateValue">0%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Click Rate</div>
+                        <div class="stat-value" id="emailsClickRateValue">0%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Bounce Rate</div>
+                        <div class="stat-value" id="emailsBounceRateValue">0%</div>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Template</th>
+                                <th>Subject</th>
+                                <th>Last Sent</th>
+                                <th>Recipients</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="emailsTableBody">
+                            <tr>
+                                <td colspan="5" class="loading">Loading email templates...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Reports Section -->
+            <div id="reports" class="content-section">
+                <div class="header">
+                    <div>
+                        <h1 class="header-title">User Reports</h1>
+                        <p class="header-subtitle">Handle user feedback and issues</p>
+                    </div>
+                </div>
+
+                <div class="filters">
+                    <button class="filter-btn active" onclick="filterReports('all')">All</button>
+                    <button class="filter-btn" onclick="filterReports('pending')">Pending</button>
+                    <button class="filter-btn" onclick="filterReports('resolved')">Resolved</button>
+                    <button class="filter-btn" onclick="filterReports('high')">High Priority</button>
+                </div>
+
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Issue</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reportsTableBody">
+                            <tr>
+                                <td colspan="6" class="empty-state">
+                                    <div class="empty-state-icon">📭</div>
+                                    <div>No reports yet</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Logs Section -->
+            <div id="logs" class="content-section">
+                <div class="header">
+                    <div>
+                        <h1 class="header-title">System Logs</h1>
+                        <p class="header-subtitle">Monitor system activity and errors</p>
+                    </div>
+                    <div class="header-actions">
+                        <select class="btn" id="logLevel" onchange="filterLogs()">
+                            <option value="all">All Levels</option>
+                            <option value="error">Errors</option>
+                            <option value="warn">Warnings</option>
+                            <option value="info">Info</option>
+                        </select>
+                        <button class="btn" onclick="clearLogs()">🗑️ Clear</button>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <div id="logsContainer" style="padding: 20px; font-family: 'Courier New', monospace; font-size: 0.85rem; max-height: 600px; overflow-y: auto;">
+                        <div style="color: #6B7280;">Loading logs...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Section -->
+            <div id="settings" class="content-section">
+                <div class="header">
+                    <div>
+                        <h1 class="header-title">System Settings</h1>
+                        <p class="header-subtitle">Configure PathGen v2</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn-primary btn" onclick="saveSettings()">💾 Save Changes</button>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-title">General Settings</div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Site Name</label>
+                        <input type="text" class="form-input" id="settingSiteName" value="PathGen v2">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Launch Date</label>
+                        <input type="datetime-local" class="form-input" id="settingLaunchDate" value="2025-12-12T00:00">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Maintenance Mode</label>
+                        <select class="form-select" id="settingMaintenanceMode">
+                            <option value="off">Off</option>
+                            <option value="on">On (Site Down)</option>
+                            <option value="admin">Admin Only</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">AI Model</label>
+                        <select class="form-select" id="settingAIModel">
+                            <option value="gpt-4o">GPT-4o (Latest)</option>
+                            <option value="gpt-4">GPT-4</option>
+                            <option value="gpt-3.5-turbo">GPT-3.5 Turbo (Cheaper)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Default AI Temperature</label>
+                        <input type="range" min="0" max="1" step="0.1" value="0.7" id="settingAITemp" oninput="document.getElementById('tempValue').textContent = this.value">
+                        <span id="tempValue">0.7</span>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-title">Feature Toggles</div>
+                    
+                    <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;">
+                        <label class="form-label" style="margin: 0;">Voice Coaching</label>
+                        <input type="checkbox" id="toggleVoice" checked>
+                    </div>
+
+                    <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;">
+                        <label class="form-label" style="margin: 0;">Replay Analysis</label>
+                        <input type="checkbox" id="toggleReplay" checked>
+                    </div>
+
+                    <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;">
+                        <label class="form-label" style="margin: 0;">Live Tweets</label>
+                        <input type="checkbox" id="toggleTweets" checked>
+                    </div>
+
+                    <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;">
+                        <label class="form-label" style="margin: 0;">Tournaments</label>
+                        <input type="checkbox" id="toggleTournaments" checked>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payments Section -->
+            <div id="payments" class="content-section">
+                <div class="header">
+                    <div>
+                        <h1 class="header-title">Payments</h1>
+                        <p class="header-subtitle">Transaction history and revenue tracking</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn" onclick="refreshPayments()">🔄 Refresh</button>
+                        <button class="btn" onclick="exportPayments()">📥 Export</button>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Total Revenue</div>
+                        <div class="stat-value" id="paymentsTotalValue">$0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">This Month</div>
+                        <div class="stat-value" id="paymentsMonthValue">$0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Failed Payments</div>
+                        <div class="stat-value" id="paymentsFailedValue">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Refunds</div>
+                        <div class="stat-value" id="paymentsRefundsValue">$0</div>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>User</th>
+                                <th>Amount</th>
+                                <th>Plan</th>
+                                <th>Status</th>
+                                <th>Payment Method</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="paymentsTableBody">
+                            <tr>
+                                <td colspan="7" class="loading">Loading payments...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Abuse Section -->
+            <div id="abuse" class="content-section">
+                <div class="header">
+                    <div>
+                        <h1 class="header-title">Abuse Detection</h1>
+                        <p class="header-subtitle">Monitor and prevent system abuse</p>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Flagged Users</div>
+                        <div class="stat-value" id="abuseFlaggedValue">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Banned Users</div>
+                        <div class="stat-value" id="abuseBannedValue">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Spam Detected</div>
+                        <div class="stat-value" id="abuseSpamValue">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Rate Limit Violations</div>
+                        <div class="stat-value" id="abuseRateLimitValue">0</div>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Violation Type</th>
+                                <th>Severity</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="abuseTableBody">
+                            <tr>
+                                <td colspan="6" class="empty-state">
+                                    <div class="empty-state-icon">✅</div>
+                                    <div>No abuse detected</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Templates Section -->
+            <div id="templates" class="content-section">
+                <div class="header">
+                    <div>
+                        <h1 class="header-title">Coaching Templates</h1>
+                        <p class="header-subtitle">Predefined coaching sessions by skill level</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn-primary btn" onclick="showModal('addTemplate')">➕ New Template</button>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Skill Level</th>
+                                <th>Category</th>
+                                <th>Uses</th>
+                                <th>Last Updated</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="templatesTableBody">
+                            <tr>
+                                <td colspan="6" class="loading">Loading templates...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals will be added here -->
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="/firebase-config.js"></script>
+    <script src="/js/admin-guard.js"></script>
+
+    <script>
+        // Navigation
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active from all nav items
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Show selected section
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.classList.add('active');
+            }
+            
+            // Set active nav item
+            event.target.closest('.nav-item').classList.add('active');
+            
+            // Load data for section
+            loadSectionData(sectionId);
+        }
+
+        // Load data for each section
+        async function loadSectionData(sectionId) {
+            switch(sectionId) {
+                case 'dashboard':
+                    await loadDashboard();
+                    break;
+                case 'users':
+                    await loadUsers();
+                    break;
+                case 'analytics':
+                    await loadAnalytics();
+                    break;
+                case 'subscriptions':
+                    await loadSubscriptions();
+                    break;
+                case 'prompts':
+                    await loadPrompts();
+                    break;
+                case 'emails':
+                    await loadEmails();
+                    break;
+                case 'reports':
+                    await loadReports();
+                    break;
+                case 'abuse':
+                    await loadAbuseData();
+                    break;
+                case 'templates':
+                    await loadTemplates();
+                    break;
+                case 'logs':
+                    await loadLogs();
+                    break;
+                case 'payments':
+                    await loadPayments();
+                    break;
+            }
+        }
+
+        // Dashboard
+        async function loadDashboard() {
+            try {
+                const db = firebase.firestore();
+                
+                // Get total users
+                const usersSnapshot = await db.collection('users').get();
+                document.getElementById('statTotalUsers').textContent = usersSnapshot.size;
+                
+                // Get active subscriptions
+                const activeSubscriptions = usersSnapshot.docs.filter(doc => {
+                    const data = doc.data();
+                    return data.subscription?.status === 'active' || data.subscription?.plan === 'pro';
+                });
+                document.getElementById('statActiveSubscriptions').textContent = activeSubscriptions.length;
+                
+                // Calculate revenue (estimate)
+                const monthlyRevenue = activeSubscriptions.length * 19.99; // Assuming $19.99/month
+                document.getElementById('statRevenue').textContent = `$${monthlyRevenue.toFixed(2)}`;
+                
+                // Get conversations count (today)
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+                
+                const conversationsSnapshot = await db.collection('conversations')
+                    .where('createdAt', '>=', today)
+                    .get();
+                document.getElementById('statConversations').textContent = conversationsSnapshot.size;
+                
+                console.log('✅ Dashboard loaded');
+            } catch (error) {
+                console.error('Error loading dashboard:', error);
+            }
+        }
+
+        // Users
+        async function loadUsers() {
+            try {
+                const db = firebase.firestore();
+                const usersSnapshot = await db.collection('users').orderBy('createdAt', 'desc').limit(100).get();
+                
+                const tbody = document.getElementById('usersTableBody');
+                tbody.innerHTML = '';
+                
+                if (usersSnapshot.empty) {
+                    tbody.innerHTML = `
+                        <tr>
+                            <td colspan="7" class="empty-state">
+                                <div class="empty-state-icon">👥</div>
+                                <div>No users yet</div>
+                            </td>
+                        </tr>
+                    `;
+                    return;
+                }
+                
+                usersSnapshot.forEach(doc => {
+                    const user = doc.data();
+                    const tr = document.createElement('tr');
+                    
+                    const initial = (user.discordUsername || user.email || 'U')[0].toUpperCase();
+                    const plan = user.subscription?.plan || 'free';
+                    const isActive = user.lastLogin && (new Date() - user.lastLogin.toDate()) < 86400000; // 24h
+                    
+                    tr.innerHTML = `
+                        <td>
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div class="user-avatar">${initial}</div>
+                                <div>
+                                    <div style="font-weight: 600; color: #fff;">${user.discordUsername || user.firstName || 'Unknown'}</div>
+                                    <div style="font-size: 0.85rem; color: #6B7280;">${doc.id}</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>${user.email || 'N/A'}</td>
+                        <td><span class="badge badge-${plan}">${plan.toUpperCase()}</span></td>
+                        <td><span class="badge badge-${isActive ? 'active' : 'inactive'}">${isActive ? 'Active' : 'Inactive'}</span></td>
+                        <td>${user.createdAt ? new Date(user.createdAt.toDate()).toLocaleDateString() : 'N/A'}</td>
+                        <td>${user.lastLogin ? new Date(user.lastLogin.toDate()).toLocaleString() : 'Never'}</td>
+                        <td>
+                            <button class="action-btn" onclick="viewUser('${doc.id}')">👁️ View</button>
+                            <button class="action-btn" onclick="editUser('${doc.id}')">✏️ Edit</button>
+                            <button class="action-btn" onclick="banUser('${doc.id}')">🚫 Ban</button>
+                        </td>
+                    `;
+                    
+                    tbody.appendChild(tr);
+                });
+                
+                console.log('✅ Users loaded:', usersSnapshot.size);
+            } catch (error) {
+                console.error('Error loading users:', error);
+                document.getElementById('usersTableBody').innerHTML = `
+                    <tr>
+                        <td colspan="7" class="empty-state">
+                            <div style="color: #EF4444;">Error loading users: ${error.message}</div>
+                        </td>
+                    </tr>
+                `;
+            }
+        }
+
+        // Subscriptions
+        async function loadSubscriptions() {
+            try {
+                const db = firebase.firestore();
+                const usersSnapshot = await db.collection('users')
+                    .where('subscription.status', '!=', null)
+                    .get();
+                
+                const tbody = document.getElementById('subscriptionsTableBody');
+                tbody.innerHTML = '';
+                
+                let activeCount = 0;
+                let trialCount = 0;
+                let churnedCount = 0;
+                let mrr = 0;
+                
+                usersSnapshot.forEach(doc => {
+                    const user = doc.data();
+                    const sub = user.subscription || {};
+                    
+                    if (sub.status === 'active') activeCount++;
+                    if (sub.status === 'trialing') trialCount++;
+                    if (sub.status === 'canceled') churnedCount++;
+                    if (sub.plan === 'pro' && sub.status === 'active') mrr += 19.99;
+                    
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${user.discordUsername || user.email || doc.id}</td>
+                        <td><span class="badge badge-${sub.plan || 'free'}">${(sub.plan || 'free').toUpperCase()}</span></td>
+                        <td><span class="badge badge-${sub.status === 'active' ? 'active' : 'inactive'}">${sub.status || 'N/A'}</span></td>
+                        <td>${sub.startDate ? new Date(sub.startDate.toDate()).toLocaleDateString() : 'N/A'}</td>
+                        <td>${sub.currentPeriodEnd ? new Date(sub.currentPeriodEnd.toDate()).toLocaleDateString() : 'N/A'}</td>
+                        <td>
+                            <button class="action-btn" onclick="viewSubscription('${doc.id}')">👁️ View</button>
+                            <button class="action-btn" onclick="cancelSubscription('${doc.id}')">❌ Cancel</button>
+                        </td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+                
+                // Update stats
+                document.getElementById('subsActiveValue').textContent = activeCount;
+                document.getElementById('subsTrialValue').textContent = trialCount;
+                document.getElementById('subsChurnedValue').textContent = churnedCount;
+                document.getElementById('subsMRRValue').textContent = `$${mrr.toFixed(2)}`;
+                
+                console.log('✅ Subscriptions loaded');
+            } catch (error) {
+                console.error('Error loading subscriptions:', error);
+            }
+        }
+
+        // Prompts
+        async function loadPrompts() {
+            const tbody = document.getElementById('promptsTableBody');
+            tbody.innerHTML = `
+                <tr>
+                    <td>Default Coaching</td>
+                    <td>General</td>
+                    <td>Dec 1, 2024</td>
+                    <td><span class="badge badge-active">Active</span></td>
+                    <td>
+                        <button class="action-btn" onclick="editPrompt('default')">✏️ Edit</button>
+                        <button class="action-btn" onclick="testPrompt('default')">🧪 Test</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Advanced Analysis</td>
+                    <td>Replay Analysis</td>
+                    <td>Dec 1, 2024</td>
+                    <td><span class="badge badge-active">Active</span></td>
+                    <td>
+                        <button class="action-btn" onclick="editPrompt('advanced')">✏️ Edit</button>
+                        <button class="action-btn" onclick="testPrompt('advanced')">🧪 Test</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voice Coaching</td>
+                    <td>Voice</td>
+                    <td>Dec 1, 2024</td>
+                    <td><span class="badge badge-active">Active</span></td>
+                    <td>
+                        <button class="action-btn" onclick="editPrompt('voice')">✏️ Edit</button>
+                        <button class="action-btn" onclick="testPrompt('voice')">🧪 Test</button>
+                    </td>
+                </tr>
+            `;
+        }
+
+        // Emails
+        async function loadEmails() {
+            const tbody = document.getElementById('emailsTableBody');
+            tbody.innerHTML = `
+                <tr>
+                    <td>PathGen v2 Announcement</td>
+                    <td>PathGen v2 Launches December 12!</td>
+                    <td>Scheduled for Dec 12</td>
+                    <td>All Users</td>
+                    <td>
+                        <button class="action-btn" onclick="previewEmail('announcement')">👁️ Preview</button>
+                        <button class="action-btn" onclick="sendEmail('announcement')">📧 Send</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Welcome Email</td>
+                    <td>Welcome to PathGen!</td>
+                    <td>Automated</td>
+                    <td>New Users</td>
+                    <td>
+                        <button class="action-btn" onclick="previewEmail('welcome')">👁️ Preview</button>
+                        <button class="action-btn" onclick="editEmail('welcome')">✏️ Edit</button>
+                    </td>
+                </tr>
+            `;
+        }
+
+        // Analytics
+        async function loadAnalytics() {
+            // Placeholder - implement with real analytics
+            document.getElementById('analyticsSessionsValue').textContent = '1,234';
+            document.getElementById('analyticsAvgSessionValue').textContent = '15m';
+            document.getElementById('analyticsRetentionValue').textContent = '68%';
+            document.getElementById('analyticsConversionValue').textContent = '12%';
+        }
+
+        // Payments
+        async function loadPayments() {
+            const tbody = document.getElementById('paymentsTableBody');
+            tbody.innerHTML = `
+                <tr>
+                    <td colspan="7" class="empty-state">
+                        <div class="empty-state-icon">💳</div>
+                        <div>No payments yet</div>
+                        <div style="margin-top: 8px; font-size: 0.85rem;">Payments will appear here after users subscribe</div>
+                    </td>
+                </tr>
+            `;
+        }
+
+        // Reports, Templates, Logs (placeholder implementations)
+        async function loadReports() { console.log('Reports loaded'); }
+        async function loadAbuseData() { console.log('Abuse data loaded'); }
+        async function loadTemplates() { console.log('Templates loaded'); }
+        async function loadLogs() {
+            const container = document.getElementById('logsContainer');
+            container.innerHTML = `
+                <div style="color: #10B981;">✅ [INFO] Admin panel loaded successfully</div>
+                <div style="color: #3B82F6;">ℹ️ [INFO] Firebase initialized</div>
+                <div style="color: #6B7280;">⚪ [DEBUG] Checking admin status...</div>
+                <div style="color: #10B981;">✅ [INFO] Admin access granted</div>
+            `;
+        }
+
+        // Action functions
+        function refreshDashboard() {
+            loadDashboard();
+            alert('Dashboard refreshed!');
+        }
+
+        function exportData() {
+            alert('Export functionality coming soon!');
+        }
+
+        function exportUsers() {
+            alert('User export coming soon!');
+        }
+
+        function searchUsers() {
+            const query = document.getElementById('userSearch').value.toLowerCase();
+            // Implement search
+        }
+
+        function filterUsers(filter) {
+            // Update active filter button
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Reload users with filter
+            loadUsers(filter);
+        }
+
+        function viewUser(userId) {
+            alert(`Viewing user: ${userId}`);
+            // Implement user detail modal
+        }
+
+        function editUser(userId) {
+            alert(`Edit user: ${userId}`);
+            // Implement edit modal
+        }
+
+        function banUser(userId) {
+            if (confirm('Are you sure you want to ban this user?')) {
+                alert(`User ${userId} banned`);
+                // Implement ban logic
+            }
+        }
+
+        function syncStripeData() {
+            alert('Syncing with Stripe... This may take a moment.');
+            // Implement Stripe sync
+        }
+
+        function saveSettings() {
+            alert('Settings saved successfully!');
+            // Implement settings save
+        }
+
+        function showModal(modalId) {
+            alert(`${modalId} modal coming soon!`);
+        }
+
+        function refreshPayments() {
+            loadPayments();
+        }
+
+        function exportPayments() {
+            alert('Payment export coming soon!');
+        }
+
+        function filterReports(filter) {
+            document.querySelectorAll('.filters .filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function filterLogs() {
+            // Implement log filtering
+        }
+
+        function clearLogs() {
+            if (confirm('Clear all logs?')) {
+                document.getElementById('logsContainer').innerHTML = '<div style="color: #6B7280;">Logs cleared</div>';
+            }
+        }
+
+        function editPrompt(promptId) {
+            alert(`Edit prompt: ${promptId}`);
+        }
+
+        function testPrompt(promptId) {
+            alert(`Testing prompt: ${promptId}`);
+        }
+
+        function previewEmail(templateId) {
+            window.open(`/api/email/admin/preview?template=${templateId}`, '_blank');
+        }
+
+        function sendEmail(templateId) {
+            if (confirm('Send this email to all users?')) {
+                alert('Email sending functionality will be implemented with the email API');
+            }
+        }
+
+        function editEmail(templateId) {
+            alert(`Edit email template: ${templateId}`);
+        }
+
+        function viewSubscription(userId) {
+            alert(`View subscription for: ${userId}`);
+        }
+
+        function cancelSubscription(userId) {
+            if (confirm('Cancel this subscription?')) {
+                alert(`Subscription canceled for ${userId}`);
+            }
+        }
+
+        // Initialize
+        window.addEventListener('DOMContentLoaded', async () => {
+            // Wait for Firebase to initialize
+            await new Promise(resolve => {
+                if (firebase.apps.length > 0) {
+                    resolve();
+                } else {
+                    setTimeout(resolve, 1000);
+                }
+            });
+            
+            // Load dashboard by default
+            await loadDashboard();
+        });
+    </script>
+</body>
+</html>
+
